@@ -20,17 +20,17 @@ export default function AboutPage() {
   const teamMembers: TeamMember[] = [
     {
       name: "Tim Grech",
-      role: "JOB TITLE",
+      role: "Owner",
       imageSrc: "/assets/images/team/placeholder-1.jpg" // Replace with actual image path later
     },
     {
       name: "FILLER NAME",
-      role: "JOB TITLE",
+      role: "Owner",
       imageSrc: "/assets/images/team/placeholder-2.jpg" // Replace with actual image path later
     },
     {
       name: "Matt Grech",
-      role: "JOB TITLE",
+      role: "Owner",
       imageSrc: "/assets/images/team/placeholder-3.jpg" // Replace with actual image path later
     }
   ];
