@@ -36,8 +36,8 @@ export const showerScreenGalleryImages = [
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-2.webp", alt: "Semi-frameless shower enclosure" },
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-3.webp", alt: "Corner shower screen installation" },
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-4.webp", alt: "Custom shower screen for unique space" },
-  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-5.webp", alt: "Minimalist shower screen design" },
-  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-6.webp", alt: "Shower screen with black hardware" },
+  // { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-5.webp", alt: "Minimalist shower screen design" },
+  // { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-6.webp", alt: "Shower screen with black hardware" },
 ];
   
 // Sliding Door Gallery Images
@@ -56,6 +56,6 @@ export const vanityGalleryImages = [
   { src: "/assets/images/vanities/gallery/vanity-gallery-2.webp", alt: "Custom bathroom vanity with storage" },
   { src: "/assets/images/vanities/gallery/vanity-gallery-3.webp", alt: "Wall-mounted vanity with timber accents" },
   { src: "/assets/images/vanities/gallery/vanity-gallery-4.webp", alt: "Small bathroom vanity solution" },
-  { src: "/assets/images/vanities/gallery/vanity-gallery-5.webp", alt: "Luxury vanity with marble countertop" },
-  { src: "/assets/images/vanities/gallery/vanity-gallery-6.webp", alt: "Built-in vanity with integrated lighting" },
+  // { src: "/assets/images/vanities/gallery/vanity-gallery-5.webp", alt: "Luxury vanity with marble countertop" },
+  // { src: "/assets/images/vanities/gallery/vanity-gallery-6.webp", alt: "Built-in vanity with integrated lighting" },
 ];
