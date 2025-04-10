@@ -43,12 +43,12 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({
     polytecImage,
     dorsetImage
   ];
-  
+
   return (
     <section className="w-full mx-auto py-16 bg-white">
       {/* Features Section */}
       <div className="max-w-6xl mx-auto text-center px-4">
-        <h2 className="text-5xl md:text-5xl font-bold mb-6 text-gray-800"
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800"
           style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
           }}>
@@ -71,7 +71,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({
       
       {/* Gallery Section */}
       <div className="mt-16 mb-8">
-        <h2 className="text-5xl font-bold mb-8 text-center text-gray-800"
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-gray-800"
           style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
           }}>

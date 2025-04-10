@@ -72,12 +72,12 @@ const MovingSlideShow: React.FC<MovingSlideShowProps> = ({ images = [] }) => {
   
   return (
     <section className='bg-white'>
-        <h2 className="text-black text-5xl text-center py-8 font-bold"
-        style={{
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
-        }}>
-        Using Only Trusted Brands
-      </h2>
+        <h2 className="text-black md:text-5xl text-4xl text-center mt-8 font-bold mb-8"
+          style={{
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
+          }}>
+          Using Only Trusted Brands
+        </h2>
       <div ref={sectionRef} className="brands bg-white"></div>
     </section>
   );
