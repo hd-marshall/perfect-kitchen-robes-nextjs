@@ -7,7 +7,6 @@ import ImageCarousel from '@/components/ImageCarousel';
 import SocialMediaSection from '@/components/SocialMediaSection';
 import HalfHero from '@/components/HalfVerticalHero';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import MovingSlidingShow from '@/components/MovingSlideShow';
 
 // Define image paths as constants
 const heroImage = "/assets/images/hero-home.jpeg";
@@ -22,7 +21,6 @@ const showerScreenImage = "/assets/images/shower-screens/services-shower.webp";
 
 // About us images
 const aboutUsWorking = "/assets/images/about-us/about-us-1.jpg";
-const aboutUsTools = "/assets/images/about-us/about-us-2.jpg";
 
 // Metadata for the page
 export const metadata = {
@@ -125,7 +123,6 @@ export default function Home() {
   // About us images for the HalfHero component
   const aboutUs = [
     aboutUsWorking,
-    aboutUsTools
   ];
   
   return (
