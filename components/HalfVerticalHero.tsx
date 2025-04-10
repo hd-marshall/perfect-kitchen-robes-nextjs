@@ -37,7 +37,7 @@ const HalfHero: React.FC<HalfHeroProps> = ({ images = [] }) => {
             About Us
           </h2>
           <p className="text-white text-base mb-4">
-            We craft beautiful kitchens, wardrobes, vanities and much more, bringing expertise and quality craftsmanship to homes across Melbourne. Transform your space with our custom design solutions.
+            We craft beautiful kitchens, wardrobes, vanities and much more, bringing expertise and quality craftsmanship to homes across Melbourne. <br></br> <br></br> Transform your space with our custom design solutions.
           </p>
           <button
             className="py-3 px-8 bg-white text-black font-normal rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-white hover:shadow-md"

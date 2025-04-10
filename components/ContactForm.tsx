@@ -272,7 +272,7 @@ const ContactForm: React.FC = () => {
                 <div className="flex flex-col ml-2">
                   <h2 className="text-2xl font-semibold">Contact Us</h2>
                   <p className="text-gray-400">Phone: 0433 537 057</p>
-                  <p className="text-gray-400">Email: perfectkitchenrobes@gmail.com</p>
+                  <p className="text-gray-400">Email: info@perfectkitchenrobes.com</p>
                 </div>
               </div>
               
