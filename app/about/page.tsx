@@ -24,7 +24,7 @@ export default function AboutPage() {
       imageSrc: "/assets/images/team/placeholder-1.jpg" // Replace with actual image path later
     },
     {
-      name: "FILLER NAME",
+      name: "Steve Grech",
       role: "Owner",
       imageSrc: "/assets/images/team/placeholder-2.jpg" // Replace with actual image path later
     },
