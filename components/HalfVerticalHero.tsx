@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface HalfHeroProps {
   images?: string[];
@@ -39,11 +40,16 @@ const HalfHero: React.FC<HalfHeroProps> = ({ images = [] }) => {
           <p className="text-white text-base mb-4">
             We craft beautiful kitchens, wardrobes, vanities and much more, bringing expertise and quality craftsmanship to homes across Melbourne. <br></br> <br></br> Transform your space with our custom design solutions.
           </p>
-          <button
-            className="py-3 px-8 bg-white text-black font-normal rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-white hover:shadow-md"
+          <Link 
+          href="/about" 
+          className="inline-block"
           >
-            Learn More
-          </button>
+            <button
+              className="py-3 px-8 bg-white text-black font-normal rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-white hover:shadow-md"
+            >
+              Learn More
+            </button>
+          </Link>  
         </div>
       </div>
       
