@@ -1,5 +1,6 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer'; // If you have a footer component
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         <main>
           {children}
+          <SpeedInsights />
           <Analytics />
         </main>
         <ContactForm/>
