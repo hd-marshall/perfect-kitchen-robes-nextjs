@@ -68,7 +68,7 @@ export default function ContactPage() {
             <div className="w-full md:w-1/2">
               <div className="h-full w-full rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/assets/images/kitchens/kitchen-contact.webp" 
+                  src="/assets/images/contact/contact-img.webp" 
                   alt="Modern kitchen design by Perfect Kitchen Robes" 
                   className="w-full h-full object-cover"
                 />
