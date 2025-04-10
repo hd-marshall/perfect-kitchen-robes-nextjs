@@ -1,4 +1,6 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer'; // If you have a footer component
 import ContactForm from '@/components/ContactForm';
@@ -22,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         <main>
           {children}
+          <Analytics />
         </main>
         <ContactForm/>
         <Footer />
