@@ -32,7 +32,7 @@ const HalfHero: React.FC<HalfHeroProps> = ({ images = [] }) => {
           <h2
             className="text-white font-nunito font-bold text-4xl md:text-5xl mb-6"
             style={{
-              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.7)',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
             }}
           >
             About Us

@@ -38,7 +38,7 @@ export default function AboutPage() {
   return (
     <section>
       <HalfHorizontalHero
-        imagePath="/assets/images/about-us/about-hero.webp"
+        imagePath="/assets/images/about-us/about-page-hero.webp"
         text="About Us"
       />
       

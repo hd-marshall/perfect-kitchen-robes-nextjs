@@ -47,19 +47,19 @@ const TestimonialSlider: React.FC = () => {
   // The testimonial data
   const testimonials: Testimonial[] = [
     {
-      title: "Exceptional Craftsmanship",
-      content: "The quality of work was outstanding. The team was meticulous with every detail, and the final result exceeded our expectations. We couldn't be happier with our new kitchen.",
-      author: "Michael Thompson"
+      title: "Very Professional",
+      content: "I had Matt and Tim redo my walk in wardrobe, very professional and quality of it is great! recommend 100%",
+      author: "Liam Bailey"
     },
     {
-      title: "Exceptional Quality",
-      content: "We've been working with this company for over 5 years, and the quality of their craftsmanship is unmatched. Every project is completed with remarkable attention to detail and using only the finest materials.",
-      author: "Sarah Johnson"
+      title: "Our Vision came to Life",
+      content: "our new wardrobe looks amazing! the owners are very friendly and professional, they made the whole process so easy and made our vision come to life :)",
+      author: "Lauren Jones"
     },
     {
-      title: "Professional Service",
-      content: "From the initial consultation to the final installation, the entire process was smooth and professional. The team was always responsive and accommodating to our specific needs and requests.",
-      author: "David Williams"
+      title: "Great Customer Service",
+      content: "Great overall experience and customer service.",
+      author: "Harry Marshall"
     }
   ];
   

@@ -20,7 +20,7 @@ const laundryImage = "/assets/images/laundries/services-laundry.webp";
 const showerScreenImage = "/assets/images/shower-screens/services-shower.webp";
 
 // About us images
-const aboutUsWorking = "/assets/images/about-us/about-us-1.jpg";
+const aboutUsWorking = "/assets/images/about-us/about-hero.webp";
 
 // Metadata for the page
 export const metadata = {
