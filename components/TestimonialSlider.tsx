@@ -166,7 +166,7 @@ const TestimonialSlider: React.FC = () => {
                       </p>
                       <div>
                         <a 
-                          href="https://g.page/r/CXX_YOUR_GOOGLE_REVIEWS_CODE_HERE/review" 
+                          href="https://g.page/r/CXYE-7ihVzZ9EAE/review" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="bg-black text-white px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-black hover:shadow-md shadow-md"
