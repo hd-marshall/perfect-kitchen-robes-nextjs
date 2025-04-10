@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <section>
       <HalfHorizontalHero
-        imagePath="/assets/images/kitchens/kitchens-hero-page.webp"
+        imagePath="/assets/images/contact/contact-hero.webp"
         text="Contact Us"
       />
       

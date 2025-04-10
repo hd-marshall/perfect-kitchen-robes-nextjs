@@ -46,8 +46,8 @@ export const slidingDoorGalleryImages = [
   { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-2.webp", alt: "Custom timber sliding doors" },
   { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-3.webp", alt: "Room divider sliding doors" },
   { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-4.webp", alt: "Sliding door with aluminium frame" },
-  // { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-5.webp", alt: "Minimalist sliding door design" },
-  // { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-6.webp", alt: "Sliding doors to outdoor area" },
+  { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-5.webp", alt: "Minimalist sliding door design" },
+  { src: "/assets/images/sliding-doors/gallery/sliding-door-gallery-6.webp", alt: "Sliding doors to outdoor area" },
 ];
   
 // Vanity Gallery Images
