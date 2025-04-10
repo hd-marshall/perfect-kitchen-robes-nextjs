@@ -79,42 +79,42 @@ export default function Home() {
 
   const galleryImages = [
     {
-      src: "/assets/images/kitchens/kitchen-home-page-gallery.webp",
+      src: "/assets/images/kitchens/kitchen-home-our-work.webp",
       alt: "Modern kitchen design",
-      description: "The Thompsons transformed their dated kitchen with sleek stone countertops and custom cabinetry. The open-concept design increased their home's value while creating the perfect family gathering space.",
+      description: "The Thompsons transformed their dated kitchen with sleek stone counter tops and custom cabinetry. The open-concept design increased their home's value while creating the perfect family gathering space.",
       buttonText: "Discover Kitchens",
       buttonLink: "/services/kitchens"
     },
     {
       src: "/assets/images/wardrobes/wardrobes-home-page-gallery.webp",
       alt: "Custom wardrobe design",
-      description: "Our floor-to-ceiling wardrobe solution solved the Millers' storage challenges with specialized compartments and mirrored sliding doors. Their bedroom is now clutter-free with everything perfectly organized.",
+      description: "Our floor-to-ceiling wardrobe solution solved the Millers' storage challenges with specialised compartments and mirrored sliding doors. Their bedroom is now clutter-free with everything perfectly organised.",
       buttonText: "Discover Wardrobes",
       buttonLink: "/services/wardrobes"
     },
     {
-      src: "/assets/images/laundries/laundry-gallery.webp",
+      src: "/assets/images/laundries/laundry-home-our-work.webp",
       alt: "Modern laundry renovation",
-      description: "The Jacksons' cramped laundry was reimagined with integrated storage, a folding counter, and efficient layout. Moisture-resistant materials ensure durability while stylish finishes complement their home.",
+      description: "The Jacksons' cramped laundry was re-imagined with integrated storage, a folding counter, and efficient layout. Moisture-resistant materials ensure durability while stylish finishes complement their home.",
       buttonText: "Discover Laundries",
       buttonLink: "/services/laundries"
     },
     {
-      src: "/assets/images/shower-screens/shower-screen-gallery.webp",
+      src: "/assets/images/shower-screens/shower-screen-home-our-work.webp",
       alt: "Frameless shower screen",
-      description: "The Roberts family modernized their bathroom with our frameless shower screen. The clear glass creates an open feel while quality installation ensures water-tight performance with minimal maintenance.",
+      description: "The Roberts family modernised their bathroom with our frame-less shower screen. The clear glass creates an open feel while quality installation ensures water-tight performance with minimal maintenance.",
       buttonText: "Discover Shower Screens",
       buttonLink: "/services/shower-screens"
     },
     {
-      src: "/assets/images/sliding-doors/sliding-door-gallery.webp",
+      src: "/assets/images/sliding-doors/sliding-home-our-work.webp",
       alt: "Custom sliding door installation",
       description: "The Changs separated their open-plan living area without losing natural light. Our glass sliding doors create distinct zones while maintaining visual flow with smooth operation and noise reduction.",
       buttonText: "Discover Sliding Doors",
       buttonLink: "/services/sliding-doors"
     },
     {
-      src: "/assets/images/vanities/vanity-gallery.webp",
+      src: "/assets/images/vanities/vanity-home-our-work.webp",
       alt: "Modern bathroom vanity",
       description: "The Patels' bathroom transformation features our floating vanity with integrated lighting and ample storage. The wall-mounted design creates floor space while waterproof materials ensure longevity.",
       buttonText: "Discover Vanities",
