@@ -9,7 +9,7 @@ import HalfHero from '@/components/HalfVerticalHero';
 import TestimonialSlider from '@/components/TestimonialSlider';
 
 // Define image paths as constants
-const heroImage = "/assets/images/hero-home.jpeg";
+const heroImage = "/assets/images/home/hero-home.jpeg";
 
 // Service images
 const kitchenImage = "/assets/images/kitchens/services-kitchen.webp";

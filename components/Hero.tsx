@@ -17,6 +17,8 @@ const Hero: React.FC<HeroProps> = ({
   buttonText,
   buttonLink
 }) => {
+  const arrowImage = "/assets/images/home/arrow.webp";
+
   return (
     <div className="relative h-screen">
       {/* Hero Image */}
@@ -46,6 +48,18 @@ const Hero: React.FC<HeroProps> = ({
         >
           {buttonText}
         </Link>
+      </div>
+      <div className="absolute bottom-10 right-0 md:bottom-4 lg:right-16 lg:bottom-4 md:right-16 z-10">
+      <Image 
+        src={arrowImage} 
+        alt="Arrow" 
+        width={150} 
+        height={200} 
+        className="transform
+                  rotate-180
+                  w-10 md:w-10 lg:w-12 
+                  object-contain"
+      />
       </div>
     </div>
   );
