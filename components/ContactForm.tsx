@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from 'react';
 
 // Define form status type
@@ -218,7 +217,6 @@ const ContactForm: React.FC = () => {
             </div>
           </form>
         </div>
-
         {/* Info Panel */}
         <div className="w-full md:w-2/5 p-8 bg-black rounded-2xl text-white">
           <div className="flex flex-col h-full justify-center">
@@ -254,25 +252,31 @@ const ContactForm: React.FC = () => {
               
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className="h-6 w-6 pt-1 mr-2 text-[#c9c5b1]" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
-                    />
-                  </svg>
+                  <a href="tel:0433537057" className="group">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-6 w-6 pt-1 mr-2 text-[#c9c5b1] group-hover:text-white transition-colors duration-300" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
+                      />
+                    </svg>
+                  </a>
                 </div>
                 <div className="flex flex-col ml-2">
                   <h2 className="text-2xl font-semibold">Contact Us</h2>
-                  <p className="text-gray-400">Phone: 0433 537 057</p>
-                  <p className="text-gray-400">Email: info@perfectkitchenrobes.com</p>
+                  <a href="tel:0433537057" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
+                    Phone: 0433 537 057
+                  </a>
+                  <a href="mailto:info@perfectkitchenrobes.com" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
+                    Email: info@perfectkitchenrobes.com
+                  </a>
                 </div>
               </div>
               
