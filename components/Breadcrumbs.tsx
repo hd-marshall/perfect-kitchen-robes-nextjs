@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const Breadcrumbs = () => {
   const pathname = usePathname();
   
-  // Don't show breadcrumbs on homepage
+  // Don't create breadcrumbs on homepage
   if (pathname === '/') {
     return null;
   }
@@ -29,13 +29,16 @@ const Breadcrumbs = () => {
   };
   
   return (
-    <nav aria-label="Breadcrumbs" className="py-2 px-4 bg-gray-50">
-      <ol className="flex items-center flex-wrap space-x-1 text-sm">
+    <nav 
+      aria-label="Breadcrumbs" 
+      className="sr-only" // Screen reader only - hidden visually
+    >
+      <ol>
         <li>
-          <Link href="/" className="text-blue-600 hover:underline">
+          <Link href="/">
             Home
           </Link>
-          <span className="mx-1.5">/</span>
+          <span>/</span>
         </li>
         
         {segments.map((segment, index) => {
@@ -47,13 +50,13 @@ const Breadcrumbs = () => {
           return (
             <li key={href}>
               {isLast ? (
-                <span className="text-gray-600">{displayName}</span>
+                <span>{displayName}</span>
               ) : (
                 <>
-                  <Link href={href} className="text-blue-600 hover:underline">
+                  <Link href={href}>
                     {displayName}
                   </Link>
-                  <span className="mx-1.5">/</span>
+                  <span>/</span>
                 </>
               )}
             </li>
