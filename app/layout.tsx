@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import '@/app/globals.css';
@@ -104,6 +105,7 @@ export default function RootLayout({
       </head>
       <body className="font-nunito">
         <Navbar />
+        <Breadcrumbs />
         <main>
           {children}
           <SpeedInsights />
