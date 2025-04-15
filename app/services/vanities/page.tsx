@@ -6,6 +6,9 @@ import { vanityGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Custom Bathroom Vanities Melbourne | Perfect Kitchen Robes",
   description: "Stylish and functional bathroom vanities tailored to your space. Expert design and installation across Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/vanities'
+  }
 };
 
 export default function VanityServicesPage() {

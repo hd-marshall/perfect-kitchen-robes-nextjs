@@ -6,6 +6,9 @@ import { slidingDoorGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Custom Sliding Door Solutions Melbourne | Perfect Kitchen Robes",
   description: "Space-saving sliding door systems for modern homes. Expert design and installation across Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/sliding-doors'
+  }
 };
 
 export default function SlidingDoorServicesPage() {

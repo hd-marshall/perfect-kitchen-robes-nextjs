@@ -6,6 +6,9 @@ import { laundryGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Custom Laundry Renovations Melbourne | Perfect Kitchen Robes",
   description: "Transform your laundry into a functional, efficient space. Expert design and installation services across Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/laundries'
+  }
 };
 
 export default function LaundryServicesPage() {

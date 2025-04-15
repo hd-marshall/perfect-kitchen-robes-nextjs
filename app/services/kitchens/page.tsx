@@ -6,6 +6,9 @@ import { kitchenGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Custom Kitchen Designs Melbourne | Perfect Kitchen Robes",
   description: "Bespoke kitchens tailored to your style and functionality needs. Expert design and installation across Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/kitchens'
+  }
 };
 
 export default function KitchenServicesPage() {

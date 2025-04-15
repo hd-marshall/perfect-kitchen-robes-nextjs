@@ -6,6 +6,9 @@ import { showerScreenGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Premium Shower Screens Melbourne | Perfect Kitchen Robes",
   description: "Elegant shower screens to enhance your bathroom. Quality materials and expert installation across Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/shower-screens'
+  }
 };
 
 export default function ShowerScreenServicesPage() {

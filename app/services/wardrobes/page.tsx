@@ -6,6 +6,9 @@ import { wardrobeGalleryImages } from '@/data/galleryImages';
 export const metadata: Metadata = {
   title: "Bespoke Wardrobe Solutions Melbourne | Perfect Kitchen Robes",
   description: "Maximise your storage space with custom wardrobes designed and installed by Perfect Kitchen Robes in Melbourne.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/services/wardrobes'
+  }
 };
 
 export default function WardrobeServicesPage() {

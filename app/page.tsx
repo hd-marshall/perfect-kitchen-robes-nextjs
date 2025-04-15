@@ -26,6 +26,9 @@ const aboutUsWorking = "/assets/images/about-us/about-hero.webp";
 export const metadata = {
   title: 'Perfect Kitchen Robes | Custom Kitchens, Wardrobes & Interiors Melbourne',
   description: 'Transform your home with bespoke kitchens, wardrobes, sliding doors and vanities crafted by experts in Melbourne. Request a quote today!',
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/'
+  }
 };
 
 export default function Home() {
