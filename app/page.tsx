@@ -133,7 +133,7 @@ export default function Home() {
       <Hero
         imagePath={heroImage}
         title="Designed for You, Built to Last"
-        text="With over 35+ years of delivering dream kitchens and robes."
+        text="With over 25+ years of delivering dream kitchens and robes."
         buttonText="Make an Enquiry"
         buttonLink="/contact"
       />

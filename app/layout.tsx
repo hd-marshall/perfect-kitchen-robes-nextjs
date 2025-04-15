@@ -83,7 +83,12 @@ export default function RootLayout({
               },
               'telephone': '0433537057',
               'url': 'https://www.perfectkitchenrobes.com/',
-              'image': 'https://www.perfectkitchenrobes.com/assets/logo-white.svg',
+              'image': [
+                'https://www.perfectkitchenrobes.com/favicon-32x32.png',
+                'https://www.perfectkitchenrobes.com/android-chrome-192x192.png',
+                'https://www.perfectkitchenrobes.com/assets/images/home/hero-home.jpeg'
+              ],
+              'logo': 'https://www.perfectkitchenrobes.com/favicon-32x32.png',
               'priceRange': '$$',
               'openingHoursSpecification': [
                 {
