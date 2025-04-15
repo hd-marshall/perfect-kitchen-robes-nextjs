@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+Allow: /_next/image*
+Allow: /fonts/
+Allow: /assets/
+Disallow: /_next/static/chunks/
+Disallow: /_next/static/development/
+
+Sitemap: https://www.perfectkitchenrobes.com/sitemap.xml
