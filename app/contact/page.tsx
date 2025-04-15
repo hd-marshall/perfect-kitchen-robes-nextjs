@@ -5,7 +5,7 @@ import SocialMediaSection from '@/components/SocialMediaSection';
 
 export const metadata: Metadata = {
   title: "Contact Us | Perfect Kitchen Robes",
-  description: "Get in touch with our team for custom kitchen and wardrobe solutions across Melbourne.",
+  description: "Ready to transform your home? Contact our Melbourne team for a free quote on kitchens, wardrobes, laundries, vanities, sliding doors, or shower screens.",
 };
 
 export default function ContactPage() {
