@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+
 import HalfHorizontalHero from '@/components/HalfHorizontalHero';
+
 import ServiceFeatures from '@/components/pages/ServicesFeatures';
 import { kitchenGalleryImages } from '@/data/galleryImages';
+
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Custom Kitchen Designs Melbourne | Perfect Kitchen Robes",
@@ -38,6 +42,7 @@ export default function KitchenServicesPage() {
         galleryImages={kitchenGalleryImages}
         galleryTitle="Our Kitchen Portfolio"
       />
+      <ContactForm />
     </main>
   );
 }

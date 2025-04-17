@@ -144,7 +144,6 @@ export default function RootLayout({
           {/* traffic speed statistics */}
           <Analytics />
         </main>
-        <ContactForm/>
         <Footer />
       </body>
     </html>

@@ -7,6 +7,7 @@ import ImageCarousel from '@/components/ImageCarousel';
 import SocialMediaSection from '@/components/SocialMediaSection';
 import HalfHero from '@/components/HalfVerticalHero';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import ContactForm from '@/components/ContactForm';
 
 // Define image paths as constants
 const heroImage = "/assets/images/home/hero-home.jpeg";
@@ -168,6 +169,7 @@ export default function Home() {
       </h2>
       
       <TestimonialSlider/>
+      <ContactForm/>
     </div>
   );
 }

@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+
 import HalfHorizontalHero from '@/components/HalfHorizontalHero';
+
 import ServiceFeatures from '@/components/pages/ServicesFeatures';
 import { vanityGalleryImages } from '@/data/galleryImages';
+
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Custom Bathroom Vanities Melbourne | Perfect Kitchen Robes",
@@ -38,6 +42,7 @@ export default function VanityServicesPage() {
         galleryImages={vanityGalleryImages}
         galleryTitle="Our Vanity Collection"
       />
+      <ContactForm />
     </main>
   );
 }

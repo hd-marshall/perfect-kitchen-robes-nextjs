@@ -1,7 +1,9 @@
 // app/about/page.tsx
 import { Metadata } from 'next';
-import HalfHorizontalHero from '@/components/HalfHorizontalHero';
 import Image from 'next/image';
+
+import HalfHorizontalHero from '@/components/HalfHorizontalHero';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "About Us | Perfect Kitchen Robes",
@@ -100,6 +102,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <ContactForm/>
     </section>
   );
 }

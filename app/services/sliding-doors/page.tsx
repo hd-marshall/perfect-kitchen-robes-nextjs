@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+
 import HalfHorizontalHero from '@/components/HalfHorizontalHero';
+
 import ServiceFeatures from '@/components/pages/ServicesFeatures';
 import { slidingDoorGalleryImages } from '@/data/galleryImages';
+
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Custom Sliding Door Solutions Melbourne | Perfect Kitchen Robes",
@@ -38,6 +42,7 @@ export default function SlidingDoorServicesPage() {
         galleryImages={slidingDoorGalleryImages}
         galleryTitle="Our Sliding Door Projects"
       />
+      <ContactForm />
     </main>
   );
 }

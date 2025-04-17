@@ -15,7 +15,7 @@ const SocialMediaSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 bg-black mb-4">
+    <div className="flex flex-col items-center justify-center py-12 bg-black mb-4">
       <h2 className="text-white text-4xl md:text-5xl text-center font-bold mb-4"
         style={{
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',

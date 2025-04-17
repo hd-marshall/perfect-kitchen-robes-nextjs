@@ -1,7 +1,9 @@
 // app/contact/page.tsx
 import { Metadata } from 'next';
+
 import HalfHorizontalHero from '@/components/HalfHorizontalHero';
 import SocialMediaSection from '@/components/SocialMediaSection';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Contact Us | Perfect Kitchen Robes",
@@ -87,7 +89,7 @@ export default function ContactPage() {
       <SocialMediaSection />
       
       {/* Map */}
-      <div className="w-full mt-16" id="map">
+      <div className="w-full" id="map">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.1752690791244!2d144.9465683!3d-37.6741667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad64f4b8b23c5e9%3A0x7d3f9c4e0c3c9b0!2s57%20Capital%20Link%20Dr%2C%20Campbellfield%20VIC%203061!5e0!3m2!1sen!2sau!4v1635000000000!5m2!1sen!2sau"
           width="100%"
@@ -96,6 +98,7 @@ export default function ContactPage() {
           loading="lazy"
         />
       </div>
+      <ContactForm />
     </section>
   );
 }

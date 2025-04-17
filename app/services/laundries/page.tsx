@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+
 import HalfHorizontalHero from '@/components/HalfHorizontalHero';
+
 import ServiceFeatures from '@/components/pages/ServicesFeatures';
 import { laundryGalleryImages } from '@/data/galleryImages';
+
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Custom Laundry Renovations Melbourne | Perfect Kitchen Robes",
@@ -38,6 +42,7 @@ export default function LaundryServicesPage() {
         galleryImages={laundryGalleryImages}
         galleryTitle="Our Laundry Transformations"
       />
+      <ContactForm />
     </main>
   );
 }
