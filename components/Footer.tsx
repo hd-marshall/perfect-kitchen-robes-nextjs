@@ -253,6 +253,16 @@ const Footer: React.FC = () => {
           <div className="text-center text-gray-400 text-sm">
             <p>© {new Date().getFullYear()} {links.companyInfo.name}. All Rights Reserved.</p>
             <p className="mt-2">All designs and images displayed are protected by copyright laws.</p>
+            
+            {/* Legal links - Privacy Policy and Cookie Policy */}
+            <div className="mt-4 flex justify-center space-x-4">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link href="/cookie-policy" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
+                Cookie Policy
+              </Link>
+            </div>
           </div>
         </div>
       </div>

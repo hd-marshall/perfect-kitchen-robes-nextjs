@@ -1,11 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next'
+import Script from 'next/script';
+
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import type { Metadata } from 'next'
+
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+
 import '@/app/globals.css';
 import { nunito } from './fonts'
 
@@ -61,11 +65,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* google tag manager - head (script) */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TQ2S3PJS');`
+          }}
+        />
+        {/* google search site map */}
         <link 
           rel="sitemap" 
           type="application/xml" 
           href="https://www.perfectkitchenrobes.com/sitemap.xml" 
         />
+        {/* google search console rich text */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -109,11 +127,21 @@ export default function RootLayout({
         />
       </head>
       <body className="font-nunito">
+        {/* google tag manager - body (script) */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ2S3PJS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+          }}
+        />
         <Navbar />
+        {/* google search console internal linking and backlinks */}
         <Breadcrumbs />
         <main>
           {children}
+          {/* vercel speed statistics */}
           <SpeedInsights />
+          {/* traffic speed statistics */}
           <Analytics />
         </main>
         <ContactForm/>
