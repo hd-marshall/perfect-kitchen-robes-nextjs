@@ -96,7 +96,7 @@ const ContactForm: React.FC = () => {
   }, []);
   
   return (
-    <div className="container flex justify-center items-center min-h-[80vh] py-4 bg-white" style={{minWidth: "100%"}}>
+    <div id="contact-form" className="container flex justify-center items-center min-h-[80vh] py-4 bg-white" style={{minWidth: "100%"}}>
       <div className="flex flex-col md:flex-row gap-6 max-w-5xl w-full">
         {/* Form Section */}
         <div className="w-full md:w-3/5 p-8 rounded-2xl shadow-2xl bg-white text-center">
@@ -208,8 +208,8 @@ const ContactForm: React.FC = () => {
             <div className="my-2 flex justify-center">
               <button 
                 type="submit"
-                className="uppercase text-sm font-bold tracking-wide bg-black text-white p-3 rounded-lg w-full md:w-1/3
-                          hover:bg-[#c9c5b1] hover:text-black transition-colors duration-300 
+                className="text-md font-bold tracking-wide bg-black text-white p-3 rounded-lg w-full md:w-1/3
+                          hover:bg-[#c9c5b1] hover:text-white transition-colors duration-300 
                           focus:outline-none focus:ring-2 focus:ring-gray-800"
               >
                 Send Message

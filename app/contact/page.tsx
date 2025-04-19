@@ -1,9 +1,9 @@
 // app/contact/page.tsx
 import { Metadata } from 'next';
 
-import HalfHorizontalHero from '@/components/HalfHorizontalHero';
-import SocialMediaSection from '@/components/SocialMediaSection';
-import ContactForm from '@/components/ContactForm';
+import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
+import SocialMediaSection from '@/components/shared/SocialMediaSection';
+import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
   title: "Contact Us | Perfect Kitchen Robes",

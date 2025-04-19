@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
 
 interface HeroProps {
   imagePath: string;
@@ -10,15 +12,14 @@ interface HeroProps {
   buttonLink: string;
 }
 
-const Hero: React.FC<HeroProps> = ({
+export default function Hero({
   imagePath,
   title,
   text,
   buttonText,
   buttonLink
-}) => {
+}: HeroProps) {
   const arrowImage = "/assets/images/home/arrow.webp";
-
   return (
     <div className="relative h-screen">
       {/* Hero Image */}
@@ -43,26 +44,42 @@ const Hero: React.FC<HeroProps> = ({
           {text}
         </p>
         <Link 
-          href={buttonLink}
-          className="bg-white text-gray-900 px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-white hover:shadow-md shadow-md"
+          href="#contact-form" 
+          scroll={false} 
+          onClick={(e) => {
+            e.preventDefault();
+            const element = document.getElementById('contact-form');
+            if (element) {
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - 100;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }}
         >
-          {buttonText}
+          <Button
+            intent="primary"
+            size="lg"
+          >
+            {buttonText}
+          </Button>
         </Link>
       </div>
+      
       <div className="absolute bottom-10 right-0 md:bottom-4 lg:right-16 lg:bottom-4 md:right-16 z-10">
-      <Image 
-        src={arrowImage} 
-        alt="Arrow" 
-        width={150} 
-        height={200} 
-        className="transform
-                  rotate-180
-                  w-10 md:w-10 lg:w-12 
-                  object-contain"
-      />
+        <Image
+          src={arrowImage}
+          alt="Arrow"
+          width={150}
+          height={200}
+          className="transform
+           rotate-180
+           w-10 md:w-10 lg:w-12
+           object-contain"
+        />
       </div>
     </div>
   );
-};
-
-export default Hero;
+}

@@ -1,19 +1,14 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import SectionTitle from '../ui/SectionTitle';
+import { testimonialsData } from '@/data/home-variables';
 
-// Define interface for testimonial
-interface Testimonial {
-  title: string;
-  content: string;
-  author: string;
-}
-
-const TestimonialSlider: React.FC = () => {
+export default function TestimonialSlider() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<(HTMLDivElement | null)[]>([]);
-  const totalSlides = 4; // Increased to include Read More slide
+  const totalSlides = testimonialsData.length + 1; // Increased to include Read More slide
   
   // Handle next slide
   const nextSlide = () => {
@@ -44,27 +39,13 @@ const TestimonialSlider: React.FC = () => {
     }
   }, [currentSlide]);
   
-  // The testimonial data
-  const testimonials: Testimonial[] = [
-    {
-      title: "Very Professional",
-      content: "I had Matt and Tim redo my walk in wardrobe, very professional and quality of it is great! recommend 100%",
-      author: "Liam Bailey"
-    },
-    {
-      title: "Our Vision came to Life",
-      content: "our new wardrobe looks amazing! the owners are very friendly and professional, they made the whole process so easy and made our vision come to life :)",
-      author: "Lauren Jones"
-    },
-    {
-      title: "Great Customer Service",
-      content: "Great overall experience and customer service.",
-      author: "Harry Marshall"
-    }
-  ];
-  
   return (
     <section className="bg-white">
+      <SectionTitle 
+        title="Don't just take our word for it..."
+        textColor='text-black'
+        backgroundColor='bg-white'
+      />
       <div className="mx-auto max-w-[1340px] px-4 pb-16 sm:px-6 lg:me-0 lg:ps-8 lg:pe-0">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center sm:text-left">
@@ -120,7 +101,7 @@ const TestimonialSlider: React.FC = () => {
               ref={sliderRef}
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {[...testimonials, null].map((testimonial, index) => (
+              {[...testimonialsData, null].map((testimonial, index) => (
                 <div 
                   key={index}
                   ref={(el) => {
@@ -169,7 +150,7 @@ const TestimonialSlider: React.FC = () => {
                           href="https://g.co/kgs/rjctrLg" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="bg-black text-white px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-black hover:shadow-md shadow-md"
+                          className="bg-black text-white px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 cursor-pointer hover:bg-[#c9c5b1] hover:text-white hover:shadow-md shadow-md"
                         >
                           Read More Reviews
                         </a>
@@ -181,7 +162,7 @@ const TestimonialSlider: React.FC = () => {
             </div>
             {/* Slide indicators */}
             <div className="mt-4 flex justify-center gap-2">
-              {[...testimonials, null].map((_, index) => (
+              {[...testimonialsData, null].map((_, index) => (
                 <button
                   key={index}
                   className={`h-2 w-2 rounded-full ${
@@ -239,6 +220,4 @@ const TestimonialSlider: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default TestimonialSlider;
+}

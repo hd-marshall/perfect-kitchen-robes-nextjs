@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 
-import HalfHorizontalHero from '@/components/HalfHorizontalHero';
-
-import ServiceFeatures from '@/components/pages/ServicesFeatures';
-import { kitchenGalleryImages } from '@/data/galleryImages';
-
-import ContactForm from '@/components/ContactForm';
+import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
+import ServiceFeatures from '@/components/services/ServicesFeatures';
+import { kitchenGalleryImages } from '@/data/services-images';
+import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
   title: "Custom Kitchen Designs Melbourne | Perfect Kitchen Robes",

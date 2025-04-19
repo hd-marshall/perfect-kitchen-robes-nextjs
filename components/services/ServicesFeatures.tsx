@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import MasonryGallery from './MasonryGallery';
-import MovingSlideShow from '../MovingSlideShow';
+import MovingSlideShow from '../shared/MovingSlideShow';
 
 // Brand images
 const coolingBrothersImage = "/assets/images/brands-used/slideshow-coolingBrothers.webp";

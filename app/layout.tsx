@@ -5,10 +5,9 @@ import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import Navbar from '@/components/Navbar';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import Footer from '@/components/Footer';
-import ContactForm from '@/components/ContactForm';
+import Navigation from '@/components/shared/Navigation';
+import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import Footer from '@/components/shared/Footer';
 
 import '@/app/globals.css';
 import { nunito } from './fonts'
@@ -134,7 +133,7 @@ export default function RootLayout({
             height="0" width="0" style="display:none;visibility:hidden"></iframe>`
           }}
         />
-        <Navbar />
+        <Navigation />
         {/* google search console internal linking and backlinks */}
         <Breadcrumbs />
         <main>

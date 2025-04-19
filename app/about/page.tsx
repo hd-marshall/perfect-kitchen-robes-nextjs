@@ -2,8 +2,8 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import HalfHorizontalHero from '@/components/HalfHorizontalHero';
-import ContactForm from '@/components/ContactForm';
+import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
+import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
   title: "About Us | Perfect Kitchen Robes",

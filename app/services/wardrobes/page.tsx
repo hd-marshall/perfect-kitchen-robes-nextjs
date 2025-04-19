@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 
-import HalfHorizontalHero from '@/components/HalfHorizontalHero';
-
-import ServiceFeatures from '@/components/pages/ServicesFeatures';
-import { wardrobeGalleryImages } from '@/data/galleryImages';
-
-import ContactForm from '@/components/ContactForm';
+import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
+import ServiceFeatures from '@/components/services/ServicesFeatures';
+import { wardrobeGalleryImages } from '@/data/services-images';
+import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
   title: "Bespoke Wardrobe Solutions Melbourne | Perfect Kitchen Robes",

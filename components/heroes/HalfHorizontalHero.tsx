@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({
   imagePath,
-  text = "Kitchen"
+  text = "Service"
 }) => {
   return (
     <div className="relative h-[600px] w-full">
