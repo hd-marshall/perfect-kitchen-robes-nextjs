@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { showerScreenGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { showerScreenGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Premium Shower Screens Melbourne | Perfect Kitchen Robes",
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function ShowerScreenServicesPage() {
   return (
-    <main>
+    <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/shower-screens/shower-screens-hero-page.webp"
         text="Shower Screens"
@@ -37,9 +40,11 @@ export default function ShowerScreenServicesPage() {
             description: "Watertight fitting by specialists to prevent leaks and ensure longevity."
           }
         ]}
-        galleryImages={showerScreenGalleryImages}
-        galleryTitle="Our Shower Screen Installations"
       />
+      <MasonryGallery title='Our Shower Screen Projects' images={showerScreenGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+
       <ContactForm />
     </main>
   );

@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { laundryGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { laundryGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Custom Laundry Renovations Melbourne | Perfect Kitchen Robes",
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function LaundryServicesPage() {
   return (
-    <main>
+    <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/laundries/laundries-hero-page.webp"
         text="Laundries"
@@ -37,9 +40,11 @@ export default function LaundryServicesPage() {
             description: "Seamless integration of appliances, sinks, and storage for a polished look."
           }
         ]}
-        galleryImages={laundryGalleryImages}
-        galleryTitle="Our Laundry Transformations"
       />
+      <MasonryGallery title='Our Laundry Projects' images={laundryGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+
       <ContactForm />
     </main>
   );

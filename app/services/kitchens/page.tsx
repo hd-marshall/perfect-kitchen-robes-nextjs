@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { kitchenGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { kitchenGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Custom Kitchen Designs Melbourne | Perfect Kitchen Robes",
@@ -15,11 +18,12 @@ export const metadata: Metadata = {
 
 export default function KitchenServicesPage() {
   return (
-    <main>
+    <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/kitchens/kitchens-hero-page.webp"
         text="Kitchens"
       />
+
       <ServiceFeatures
         serviceTitle="Our Kitchen Design Services"
         serviceDescription="From contemporary minimalist designs to classic traditional layouts, we craft kitchens that reflect your unique style and meet your specific needs."
@@ -37,9 +41,12 @@ export default function KitchenServicesPage() {
             description: "Precision installation by our skilled and experienced local team."
           }
         ]}
-        galleryImages={kitchenGalleryImages}
-        galleryTitle="Our Kitchen Portfolio"
       />
+
+      <MasonryGallery title='Our Kitchen Projects' images={kitchenGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+      
       <ContactForm />
     </main>
   );

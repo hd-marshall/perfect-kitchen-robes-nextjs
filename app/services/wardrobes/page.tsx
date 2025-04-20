@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { wardrobeGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { wardrobeGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Bespoke Wardrobe Solutions Melbourne | Perfect Kitchen Robes",
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function WardrobeServicesPage() {
   return (
-    <main>
+    <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/wardrobes/wardrobes-hero-page.webp"
         text="Wardrobes"
@@ -37,9 +40,11 @@ export default function WardrobeServicesPage() {
             description: "Contemporary finishes and detailing that elevate your bedroom's appearance."
           }
         ]}
-        galleryImages={wardrobeGalleryImages}
-        galleryTitle="Our Wardrobe Collection"
       />
+      <MasonryGallery title='Our Wardrobe Projects' images={wardrobeGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+
       <ContactForm />
     </main>
   );

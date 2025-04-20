@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { slidingDoorGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { slidingDoorGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Custom Sliding Door Solutions Melbourne | Perfect Kitchen Robes",
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function SlidingDoorServicesPage() {
   return (
-    <main>
+    <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/sliding-doors/sliding-doors-hero-page.webp"
         text="Sliding Doors"
@@ -37,9 +40,11 @@ export default function SlidingDoorServicesPage() {
             description: "Wide range of glass, timber and finish options to complement your interior décor."
           }
         ]}
-        galleryImages={slidingDoorGalleryImages}
-        galleryTitle="Our Sliding Door Projects"
       />
+      <MasonryGallery title='Our Sliding Door Projects' images={slidingDoorGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+
       <ContactForm />
     </main>
   );

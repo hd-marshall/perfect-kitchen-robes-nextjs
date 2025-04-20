@@ -59,3 +59,12 @@ export const vanityGalleryImages = [
   // { src: "/assets/images/vanities/gallery/vanity-gallery-5.webp", alt: "Luxury vanity with marble countertop" },
   // { src: "/assets/images/vanities/gallery/vanity-gallery-6.webp", alt: "Built-in vanity with integrated lighting" },
 ];
+
+// Brands Used
+export const brandsUsedImages = [
+  { src: "/assets/images/brands-used/slideshow-coolingBrothers.webp", alt: "Cooling Brothers brand logo" },
+  { src: "/assets/images/brands-used/slideshow-nikpol.webp", alt: "Nikpol brand logo" },
+  { src: "/assets/images/brands-used/slideshow-pivotech.webp", alt: "Pivotech brand logo" },
+  { src: "/assets/images/brands-used/slideshow-polytec.webp", alt: "Polytec brand logo" },
+  { src: "/assets/images/brands-used/slideshow-dorset.webp", alt: "Dorset brand logo" }
+];

@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
-import { vanityGalleryImages } from '@/data/services-images';
+import MasonryGallery from '@/components/services/MasonryGallery';
+import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+
+import { vanityGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
   title: "Custom Bathroom Vanities Melbourne | Perfect Kitchen Robes",
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function VanityServicesPage() {
   return (
-    <main>
+    <main className='bg-white'> 
       <HalfHorizontalHero
         imagePath="/assets/images/vanities/vanities-hero-page.webp"
         text="Vanities"
@@ -37,9 +40,11 @@ export default function VanityServicesPage() {
             description: "Contemporary styles and finishes that complement modern Australian bathrooms."
           }
         ]}
-        galleryImages={vanityGalleryImages}
-        galleryTitle="Our Vanity Collection"
       />
+      <MasonryGallery title='Our Vanity Projects' images={vanityGalleryImages} />
+
+      <MovingSlideShow images={brandsUsedImages} />
+
       <ContactForm />
     </main>
   );
