@@ -43,7 +43,7 @@ export default function KitchenServicesPage() {
         ]}
       />
 
-      <MasonryGallery title='Our Kitchen Projects' images={kitchenGalleryImages} />
+      <MasonryGallery title='Our Kitchen Portfolio' images={kitchenGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
       

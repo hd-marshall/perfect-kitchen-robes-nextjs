@@ -41,7 +41,7 @@ export default function WardrobeServicesPage() {
           }
         ]}
       />
-      <MasonryGallery title='Our Wardrobe Projects' images={wardrobeGalleryImages} />
+      <MasonryGallery title='Our Wardrobe Collection' images={wardrobeGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
 

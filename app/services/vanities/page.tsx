@@ -41,7 +41,7 @@ export default function VanityServicesPage() {
           }
         ]}
       />
-      <MasonryGallery title='Our Vanity Projects' images={vanityGalleryImages} />
+      <MasonryGallery title='Our Vanity Collection' images={vanityGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
 

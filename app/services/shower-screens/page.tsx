@@ -41,7 +41,7 @@ export default function ShowerScreenServicesPage() {
           }
         ]}
       />
-      <MasonryGallery title='Our Shower Screen Projects' images={showerScreenGalleryImages} />
+      <MasonryGallery title='Our Shower Screen Installations' images={showerScreenGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
 
