@@ -41,7 +41,7 @@ export default function LaundryServicesPage() {
           }
         ]}
       />
-      <MasonryGallery title='Our Laundry Transformation' images={laundryGalleryImages} />
+      <MasonryGallery title='Our Laundry Transformations' images={laundryGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
 
