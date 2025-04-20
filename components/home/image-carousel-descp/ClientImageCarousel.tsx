@@ -49,7 +49,7 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
     <section className="bg-zinc-900">
       {/* Mobile: Container for image and content stacked vertically */}
       <div className="md:hidden">
-        <div className="relative w-full overflow-hidden rounded-md aspect-video">
+        <div className="relative w-full overflow-hidden rounded-md h-[55vh]">
           {images.map((image, index) => (
             <div 
               key={index}
@@ -111,7 +111,7 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
 
       {/* Desktop version */}
       <div className="hidden md:block w-11/12 mx-auto lg:w-9/10 shadow-sm shadow-black/25">
-        <div className="relative w-full overflow-hidden rounded-md aspect-video">
+        <div className="relative w-full overflow-hidden rounded-md h-[70vh]">
           {images.map((image, index) => (
             <div 
               key={index}
