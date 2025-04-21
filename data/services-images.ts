@@ -2,9 +2,9 @@
 
 // Kitchen Gallery Images
 export const kitchenGalleryImages = [
-  { src: "/assets/images/kitchens/gallery/kitchen-gallery-1.webp", alt: "Modern kitchen with island bench and pendant lighting" },
+  // { src: "/assets/images/kitchens/gallery/kitchen-gallery-1.webp", alt: "Modern kitchen with island bench and pendant lighting" },
   { src: "/assets/images/kitchens/gallery/kitchen-gallery-2.webp", alt: "White kitchen with marble countertops" },
-  { src: "/assets/images/kitchens/gallery/kitchen-gallery-3.webp", alt: "Kitchen with custom cabinetry and integrated appliances" },
+  // { src: "/assets/images/kitchens/gallery/kitchen-gallery-3.webp", alt: "Kitchen with custom cabinetry and integrated appliances" },
   { src: "/assets/images/kitchens/gallery/kitchen-gallery-4.webp", alt: "Open concept kitchen with dining area" },
   { src: "/assets/images/kitchens/gallery/kitchen-gallery-5.webp", alt: "Contemporary kitchen with black fixtures" },
   { src: "/assets/images/kitchens/gallery/kitchen-gallery-6.webp", alt: "Kitchen renovation with custom storage solutions" },
@@ -52,10 +52,10 @@ export const slidingDoorGalleryImages = [
   
 // Vanity Gallery Images
 export const vanityGalleryImages = [
-  { src: "/assets/images/vanities/gallery/vanity-gallery-1.webp", alt: "Modern floating vanity with double sinks" },
+  // { src: "/assets/images/vanities/gallery/vanity-gallery-1.webp", alt: "Modern floating vanity with double sinks" },
   { src: "/assets/images/vanities/gallery/vanity-gallery-2.webp", alt: "Custom bathroom vanity with storage" },
   { src: "/assets/images/vanities/gallery/vanity-gallery-3.webp", alt: "Wall-mounted vanity with timber accents" },
-  { src: "/assets/images/vanities/gallery/vanity-gallery-4.webp", alt: "Small bathroom vanity solution" },
+  // { src: "/assets/images/vanities/gallery/vanity-gallery-4.webp", alt: "Small bathroom vanity solution" },
   // { src: "/assets/images/vanities/gallery/vanity-gallery-5.webp", alt: "Luxury vanity with marble countertop" },
   // { src: "/assets/images/vanities/gallery/vanity-gallery-6.webp", alt: "Built-in vanity with integrated lighting" },
 ];

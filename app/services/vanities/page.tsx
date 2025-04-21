@@ -20,7 +20,7 @@ export default function VanityServicesPage() {
   return (
     <main className='bg-white'> 
       <HalfHorizontalHero
-        imagePath="/assets/images/vanities/vanities-hero-page.webp"
+        imagePath="/assets/images/vanities/vanity-home-our-work.webp"
         text="Vanities"
       />
       <ServiceFeatures
