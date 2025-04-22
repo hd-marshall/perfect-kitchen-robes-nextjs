@@ -6,8 +6,11 @@ import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
-  title: "About Us | Perfect Kitchen Robes",
-  description: "Meet the team behind Perfect Kitchen Robes, providing custom kitchen and wardrobe solutions in Melbourne.",
+  title: "About Us | Melbourne's Kitchen & Wardrobe Specialists | Perfect Kitchen & Robes",
+  description: "Discover Perfect Kitchen & Robes - a family-owned Melbourne business with 25+ years crafting quality kitchens & wardrobes with exceptional service.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/about'
+  }
 };
 
 // Team member interface
@@ -41,7 +44,7 @@ export default function AboutPage() {
     <section>
       <HalfHorizontalHero
         imagePath="/assets/images/about-us/about-page-hero.webp"
-        text="About Us"
+        text="About Perfect Kitchen & Robes"
       />
       
       {/* Company Introduction */}

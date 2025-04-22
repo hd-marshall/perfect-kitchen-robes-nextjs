@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { kitchenGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Custom Kitchen Designs Melbourne | Perfect Kitchen Robes",
-  description: "Bespoke kitchens tailored to your style and functionality needs. Expert design and installation across Melbourne.",
+  title: "Custom Kitchen Design & Installation Melbourne | Perfect Kitchen & Robes",
+  description: "Transform your space with bespoke kitchen designs from Perfect Kitchen & Robes. Expert Melbourne designers & installers. Request a free consultation!",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/kitchens'
   }
@@ -21,7 +21,7 @@ export default function KitchenServicesPage() {
     <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/kitchens/kitchens-hero-page.webp"
-        text="Kitchens"
+        text="Custom Kitchen Designs Melbourne"
       />
 
       <ServiceFeatures

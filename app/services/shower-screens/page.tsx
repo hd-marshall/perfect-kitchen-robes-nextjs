@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { showerScreenGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Premium Shower Screens Melbourne | Perfect Kitchen Robes",
-  description: "Elegant shower screens to enhance your bathroom. Quality materials and expert installation across Melbourne.",
+  title: "Custom Shower Screens Melbourne | Installation | Perfect Kitchen & Robes",
+  description: "Enhance your bathroom with modern, high-quality shower screens from Perfect Kitchen & Robes. Expert measurement & installation across Melbourne.",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/shower-screens'
   }
@@ -21,7 +21,7 @@ export default function ShowerScreenServicesPage() {
     <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/shower-screens/shower-screens-hero-page.webp"
-        text="Shower Screens"
+        text="Custom Shower Screens Melbourne"
       />
       <ServiceFeatures
         serviceTitle="Our Shower Screen Options"

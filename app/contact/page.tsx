@@ -6,8 +6,11 @@ import SocialMediaSection from '@/components/shared/SocialMediaSection';
 import ContactForm from '@/components/shared/ContactForm';
 
 export const metadata: Metadata = {
-  title: "Contact Us | Perfect Kitchen Robes",
-  description: "Ready to transform your home? Contact our Melbourne team for a free quote on kitchens, wardrobes, laundries, vanities, sliding doors, or shower screens.",
+  title: "Contact Us - Free Quote | Melbourne | Perfect Kitchen & Robes",
+  description: "Contact Perfect Kitchen & Robes in Melbourne for a free consultation & quote on custom kitchens, wardrobes, laundries & more. Call or enquire online.",
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/contact'
+  }
 };
 
 export default function ContactPage() {
@@ -15,7 +18,7 @@ export default function ContactPage() {
     <section>
       <HalfHorizontalHero
         imagePath="/assets/images/contact/contact-hero.webp"
-        text="Contact Us"
+        text="Contact Perfect Kitchen & Robes"
       />
       
       {/* Contact Information Section - Styled like the image */}

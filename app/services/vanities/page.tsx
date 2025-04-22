@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { vanityGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Custom Bathroom Vanities Melbourne | Perfect Kitchen Robes",
-  description: "Stylish and functional bathroom vanities tailored to your space. Expert design and installation across Melbourne.",
+  title: "Custom Bathroom Vanities Melbourne | Design & Fit | Perfect Kitchen & Robes",
+  description: "Upgrade your bathroom with elegant, custom-designed vanities from Perfect Kitchen & Robes in Melbourne. Quality materials & expert installation.",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/vanities'
   }
@@ -21,7 +21,7 @@ export default function VanityServicesPage() {
     <main className='bg-white'> 
       <HalfHorizontalHero
         imagePath="/assets/images/vanities/vanity-home-our-work.webp"
-        text="Vanities"
+        text="Custom Bathroom Vanities Melbourne"
       />
       <ServiceFeatures
         serviceTitle="Our Vanity Craftsmanship"

@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { laundryGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Custom Laundry Renovations Melbourne | Perfect Kitchen Robes",
-  description: "Transform your laundry into a functional, efficient space. Expert design and installation services across Melbourne.",
+  title: "Custom Laundry Renovations Melbourne | Fit-Outs | Perfect Kitchen & Robes",
+  description: "Create a functional & stylish laundry room with custom renovations by Perfect Kitchen & Robes in Melbourne. Smart storage solutions & quality fit-outs.",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/laundries'
   }
@@ -21,7 +21,7 @@ export default function LaundryServicesPage() {
     <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/laundries/laundries-hero-page.webp"
-        text="Laundries"
+        text="Custom Laundry Renovations Melbourne"
       />
       <ServiceFeatures
         serviceTitle="Our Laundry Solutions"

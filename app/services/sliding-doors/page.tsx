@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { slidingDoorGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Custom Sliding Door Solutions Melbourne | Perfect Kitchen Robes",
-  description: "Space-saving sliding door systems for modern homes. Expert design and installation across Melbourne.",
+  title: "Custom Sliding Doors Melbourne | Wardrobes & Rooms | Perfect Kitchen & Robes",
+  description: "Stylish & space-saving sliding doors for wardrobes & rooms in Melbourne. Expert design & installation by Perfect Kitchen & Robes. Explore options.",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/sliding-doors'
   }
@@ -21,7 +21,7 @@ export default function SlidingDoorServicesPage() {
     <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/sliding-doors/sliding-doors-hero-page.webp"
-        text="Sliding Doors"
+        text="Custom Sliding Door Solutions Melbourne"
       />
       <ServiceFeatures
         serviceTitle="Our Sliding Door Solutions"

@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({
       
       {/* Content */}
       <div className="relative flex items-center h-full px-4 md:px-12 lg:px-20">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
           {text}
         </h1>
       </div>

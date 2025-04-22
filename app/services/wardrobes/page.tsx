@@ -9,8 +9,8 @@ import ContactForm from '@/components/shared/ContactForm';
 import { wardrobeGalleryImages, brandsUsedImages } from '@/data/services-images';
 
 export const metadata: Metadata = {
-  title: "Bespoke Wardrobe Solutions Melbourne | Perfect Kitchen Robes",
-  description: "Maximise your storage space with custom wardrobes designed and installed by Perfect Kitchen Robes in Melbourne.",
+  title: "Custom Wardrobe Design & Installation Melbourne | Perfect Kitchen & Robes",
+  description: "Beautiful, functional custom wardrobes designed & installed in Melbourne. Maximise storage with bespoke solutions from Perfect Kitchen & Robes. Get a quote.",
   alternates: {
     canonical: 'https://www.perfectkitchenrobes.com/services/wardrobes'
   }
@@ -21,7 +21,7 @@ export default function WardrobeServicesPage() {
     <main className='bg-white'>
       <HalfHorizontalHero
         imagePath="/assets/images/wardrobes/wardrobes-hero-page.webp"
-        text="Wardrobes"
+        text="Custom Wardrobes Melbourne"
       />
       <ServiceFeatures
         serviceTitle="Our Wardrobe Solutions"
