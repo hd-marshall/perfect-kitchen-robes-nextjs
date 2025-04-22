@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
-
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import ServiceFeatures from '@/components/services/ServicesFeatures';
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import ContactForm from '@/components/shared/ContactForm';
+import FAQ from '@/components/shared/FAQ'
 
 import { wardrobeGalleryImages, brandsUsedImages } from '@/data/services-images';
+import { wardrobeFAQs } from '@/data/faq-data';
 
 export const metadata: Metadata = {
   title: "Custom Wardrobe Design & Installation Melbourne | Perfect Kitchen & Robes",
@@ -23,6 +24,7 @@ export default function WardrobeServicesPage() {
         imagePath="/assets/images/wardrobes/wardrobes-hero-page.webp"
         text="Custom Wardrobes Melbourne"
       />
+
       <ServiceFeatures
         serviceTitle="Our Wardrobe Solutions"
         serviceDescription="We create functional, elegant wardrobes that maximise your storage while complementing your bedroom's aesthetic."
@@ -41,11 +43,17 @@ export default function WardrobeServicesPage() {
           }
         ]}
       />
+
       <MasonryGallery title='Our Wardrobe Collection' images={wardrobeGalleryImages} />
 
       <MovingSlideShow images={brandsUsedImages} />
-
+      
       <ContactForm />
+
+      <FAQ 
+        faqData={wardrobeFAQs} 
+        title="Frequently Asked Questions" 
+      />
     </main>
   );
 }
