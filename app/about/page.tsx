@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">Our Story</h2>
           <p className="text-lg mb-8 text-black">
-            Perfect Kitchen & Robes is a family-owned business with 35+ years of experience in designing and installing custom kitchen and wardrobe solutions throughout Melbourne.
+            Perfect Kitchen & Robes is a family-owned business with 25+ years of experience in designing and installing custom kitchen and wardrobe solutions throughout Melbourne.
           </p>
           <p className="text-lg mb-8 text-black">
             We take pride in our craftsmanship, attention to detail, and commitment to customer satisfaction. Every project is handled with care, from initial design consultation to final installation.
