@@ -46,9 +46,9 @@ export default function FAQ({
                 onClick={() => toggleAccordion(index)}
                 aria-expanded={openIndex === index}
               >
-                <h5 className="text-gray-900 font-medium">
+                <h4 className="text-black font-medium">
                   {faq.question}
-                </h5>
+                </h4>
                 <svg
                   className={`text-gray-500 transition duration-500 group-hover:text-[#c9c5b1] ${
                     openIndex === index ? "text-[#c9c5b1] rotate-180" : ""
