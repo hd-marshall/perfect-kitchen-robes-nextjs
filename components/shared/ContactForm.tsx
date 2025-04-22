@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
         {/* Form Section */}
         <div className="w-full md:w-3/5 p-8 rounded-2xl shadow-2xl bg-white text-center">
           <div className="flex justify-center mb-6">
-            <h1 className="font-bold uppercase text-4xl md:text-5xl text-black">Make An Enquiry</h1>
+            <span className="font-bold uppercase text-4xl md:text-5xl text-black">Make An Enquiry</span>
           </div>
           
           {/* Form with message display */}
