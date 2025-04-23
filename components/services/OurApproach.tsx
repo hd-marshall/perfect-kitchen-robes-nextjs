@@ -120,7 +120,7 @@ export default function OurProcess(): React.ReactElement {
             {processStepsData.map((step, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 min-w-[280px] w-[85%] snap-start bg-white rounded shadow-md p-8 relative"
+                className="flex-shrink-0 min-w-[280px] w-[85%] snap-start bg-white rounded-lg shadow-xl p-8 relative"
               >
                 {/* Image */}
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
@@ -185,7 +185,7 @@ export default function OurProcess(): React.ReactElement {
           {/* Top row: first 3 steps */}
           <div className="grid grid-cols-3 gap-6">
             {processStepsData.slice(0, 3).map((step, index) => (
-              <div key={index} className="bg-white rounded shadow-md p-8 relative">
+              <div key={index} className="bg-white rounded-lg shadow-xl p-8 relative">
                 {/* Image */}
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <Image
@@ -224,7 +224,7 @@ export default function OurProcess(): React.ReactElement {
           {/* Bottom row: last 2 steps centered */}
           <div className="grid grid-cols-2 gap-6 mx-auto" style={{ width: '66%' }}>
             {processStepsData.slice(3, 5).map((step, index) => (
-              <div key={index + 3} className="bg-white rounded shadow-md p-8 relative">
+              <div key={index + 3} className="bg-white rounded-lg shadow-xl p-8 relative">
                 {/* Image */}
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <Image
