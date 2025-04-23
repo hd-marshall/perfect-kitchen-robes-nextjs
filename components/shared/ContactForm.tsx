@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 // Define form status type
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -16,6 +17,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+  const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
   const [statusMessage, setStatusMessage] = useState<string>('');
@@ -62,14 +64,8 @@ const ContactForm: React.FC = () => {
         if (form) {
           form.reset();
         }
-        // Show success message
-        setFormStatus('success');
-        setStatusMessage('Thank you! Your message has been sent.');
-        // Optional: Hide success message after 5 seconds
-        setTimeout(() => {
-          setFormStatus('idle');
-          setStatusMessage('');
-        }, 5000);
+        // Redirect to thank you page
+        router.push('/thank-you');
       })
       .catch(error => {
         console.log(error);
@@ -93,7 +89,7 @@ const ContactForm: React.FC = () => {
         form.removeEventListener('submit', handleSubmit);
       }
     };
-  }, []);
+  }, [router]);
   
   return (
     <div id="contact-form" className="container flex justify-center items-center min-h-[80vh] py-4 bg-white" style={{minWidth: "100%"}}>
