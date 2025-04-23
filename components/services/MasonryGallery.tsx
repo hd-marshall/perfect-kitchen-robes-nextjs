@@ -107,15 +107,19 @@ export default function ResponsiveGallery({
                       index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
                   >
-                    <Image
-                      className="w-full h-full rounded-lg"
-                      src={image.src}
-                      alt={image.alt}
-                      width={800}
-                      height={600}
-                      priority={index === currentSlide}
-                      style={{ objectFit: 'cover' }}
-                    />
+                    <div className="relative w-full h-full">
+                      <Image
+                        className="w-full h-full rounded-lg"
+                        src={image.src}
+                        alt={image.alt}
+                        width={800}
+                        height={600}
+                        priority={index === currentSlide}
+                        style={{ objectFit: 'cover' }}
+                      />
+                      {/* Added overlay with 30% opacity */}
+                      <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -177,7 +181,7 @@ export default function ResponsiveGallery({
               {column1.map((image, index) => (
                 <div
                   key={`image-col1-${index}`}
-                  className="h-[65vh] overflow-hidden rounded-lg"
+                  className="h-[65vh] overflow-hidden rounded-lg relative"
                 >
                   <Image
                     className="w-full h-full rounded-lg"
@@ -187,6 +191,8 @@ export default function ResponsiveGallery({
                     height={400}
                     style={{ objectFit: 'cover' }}
                   />
+                  {/* Added overlay with 30% opacity */}
+                  <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
                 </div>
               ))}
             </div>
@@ -197,7 +203,7 @@ export default function ResponsiveGallery({
                 {column2.map((image, index) => (
                   <div
                     key={`image-col2-${index}`}
-                    className="h-[65vh] overflow-hidden rounded-lg"
+                    className="h-[65vh] overflow-hidden rounded-lg relative"
                   >
                     <Image
                       className="w-full h-full rounded-lg"
@@ -207,6 +213,8 @@ export default function ResponsiveGallery({
                       height={400}
                       style={{ objectFit: 'cover' }}
                     />
+                    {/* Added overlay with 30% opacity */}
+                    <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
                   </div>
                 ))}
               </div>

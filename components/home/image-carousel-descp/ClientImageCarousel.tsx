@@ -65,6 +65,8 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
                 className="object-cover rounded-md"
                 sizes="100vw"
               />
+              {/* Added overlay */}
+              <div className="absolute inset-0 bg-black opacity-30"></div>
             </div>
           ))}
           {/* Navigation buttons and indicators */}
@@ -127,6 +129,8 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
                 className="object-cover rounded-md"
                 sizes="(max-width: 1200px) 85vw, 1200px"
               />
+              {/* Added overlay */}
+              <div className="absolute inset-0 bg-black opacity-30"></div>
               
               <div className="absolute bottom-12 left-0 w-3/4 bg-zinc-900 bg-opacity-90 p-6 flex flex-col items-center">
                 <p className="text-white mb-4 text-base md:text-lg text-center">
