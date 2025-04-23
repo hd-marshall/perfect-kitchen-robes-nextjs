@@ -2,8 +2,10 @@ User-agent: *
 Allow: /
 Allow: /_next/image*
 Allow: /fonts/
-Allow: /assets/
+Disallow: /assets/images/  # Prevent bulk image indexing
 Disallow: /_next/static/chunks/
 Disallow: /_next/static/development/
+Disallow: /api/  # Prevent API routes from being indexed
+Disallow: /*?*  # Prevent indexing of dynamic URLs with query parameters
 
 Sitemap: https://www.perfectkitchenrobes.com/sitemap.xml
