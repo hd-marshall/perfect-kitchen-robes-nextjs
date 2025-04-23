@@ -1,6 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Thank You | Perfect Kitchen & Robes',
+  description: 'Thank you for your enquiry with Perfect Kitchen & Robes. We\'ve received your message and will be in touch shortly to discuss your kitchen and wardrobe needs.',
+  robots: 'noindex, follow',
+  alternates: {
+    canonical: 'https://www.perfectkitchenrobes.com/thank-you',
+  },
+};
 
 export default function ThankYouPage() {
   return (
