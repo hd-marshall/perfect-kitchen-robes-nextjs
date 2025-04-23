@@ -2,7 +2,6 @@ import React from 'react';
 
 import Hero from '@/components/heroes/Hero';
 import GridGallery from '@/components/home/GridGallery';
-import OurProcess from '@/components/home/OurApproach';
 import ImageCarousel from '@/components/home/image-carousel-descp/ImageCarousel';
 import SocialMediaSection from '@/components/shared/SocialMediaSection';
 import HalfHero from '@/components/heroes/vertical-hero/HalfVerticalHero';
@@ -33,8 +32,6 @@ export default function Home() {
       />
       
       <GridGallery images={servicesData}/>
-
-      <OurProcess/>
 
       <ImageCarousel images={galleryData}/>
 

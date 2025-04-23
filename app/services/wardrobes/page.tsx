@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
-import ServiceFeatures from '@/components/services/ServicesFeatures';
+import SectionTitle from '@/components/ui/SectionTitle';
+// import ServiceFeatures from '@/components/services/ServicesFeatures';
+import OurApproach from '@/components/services/OurApproach';
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
+import MaterialsFeatures from '@/components/services/MaterialsFeatures';
 import ContactForm from '@/components/shared/ContactForm';
 import FAQ from '@/components/shared/FAQ'
 
@@ -25,27 +28,21 @@ export default function WardrobeServicesPage() {
         text="Custom Wardrobes Melbourne"
       />
 
-      <ServiceFeatures
-        serviceTitle="Our Wardrobe Solutions"
-        serviceDescription="We create functional, elegant wardrobes that maximise your storage while complementing your bedroom's aesthetic."
-        features={[
-          {
-            title: "Bespoke Storage",
-            description: "Customised compartments designed around your clothing and accessories collection."
-          },
-          {
-            title: "Quality Hardware",
-            description: "Smooth-gliding doors and soft-close drawers for everyday luxury and convenience."
-          },
-          {
-            title: "Stylish Finishes",
-            description: "Contemporary finishes and detailing that elevate your bedroom's appearance."
-          }
-        ]}
-      />
+      <div className='pt-8 bg-zinc-800'>
+        <SectionTitle 
+          title="Find Your Perfect Wardrobe Style"
+          subtitle="Every Melbourne home and personal style is unique, which is why we specialise in crafting wardrobes that truly fit your space and needs. <br/><br/> Whether you're dreaming of a spacious walk-in wardrobe, need a seamlessly integrated built-in wardrobe for a bedroom, or want a clever reach-in robe for a smaller room, our team has the expertise to design and install it perfectly. We excel at finding smart solutions for tricky spaces, like angled ceilings or awkward corners, ensuring every centimetre works for you."
+          textColor='text-white'
+          backgroundColor='bg-zinc-800'
+        />
+      </div>
+
+      <OurApproach />
 
       <MasonryGallery title='Our Wardrobe Collection' images={wardrobeGalleryImages} />
-
+      
+      <MaterialsFeatures />
+      
       <MovingSlideShow images={brandsUsedImages} />
       
       <ContactForm />

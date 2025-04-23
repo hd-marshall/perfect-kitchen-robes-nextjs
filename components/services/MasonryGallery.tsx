@@ -89,111 +89,94 @@ export default function ResponsiveGallery({
   // Carousel layout for mobile/tablet
   if (isMobileOrTablet) {
     return (
-      <>
-        <SectionTitle 
-          title={title}
-          textColor="text-black"
-          backgroundColor={bgColor}
-        />
-        <div className="container mx-auto px-4 pb-4 bg-white">
-          <div className="relative h-[60vh]">
-            {/* Carousel slides */}
-            <div className="h-full overflow-hidden rounded-lg relative">
-              {displayImages.map((image, index) => (
-                <div 
-                  key={`carousel-slide-${index}`}
-                  className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                  }`}
-                >
-                  <Image
-                    className="w-full h-full rounded-lg"
-                    src={image.src}
-                    alt={image.alt}
-                    width={800}
-                    height={600}
-                    priority={index === currentSlide}
-                    style={{ objectFit: 'cover' }}
+      <section className={`pb-8 ${bgColor}`}>
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            title={title}
+            textColor="text-black"
+            backgroundColor={bgColor}
+          />
+          <div className="pb-4">
+            <div className="relative h-[60vh]">
+              {/* Carousel slides */}
+              <div className="h-full overflow-hidden rounded-lg relative">
+                {displayImages.map((image, index) => (
+                  <div 
+                    key={`carousel-slide-${index}`}
+                    className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+                      index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}
+                  >
+                    <Image
+                      className="w-full h-full rounded-lg"
+                      src={image.src}
+                      alt={image.alt}
+                      width={800}
+                      height={600}
+                      priority={index === currentSlide}
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Navigation buttons */}
+              <button
+                onClick={goToPrevSlide}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full shadow-lg border-2 border-black"
+                aria-label="Previous image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={goToNextSlide}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full shadow-lg border-2 border-black"
+                aria-label="Next image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              
+              {/* Dots indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                {displayImages.map((_, index) => (
+                  <button
+                    key={`dot-${index}`}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
                   />
-                </div>
-              ))}
-            </div>
-            
-            {/* Navigation buttons */}
-            <button
-              onClick={goToPrevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full shadow-lg border-2 border-black"
-              aria-label="Previous image"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button
-              onClick={goToNextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full shadow-lg border-2 border-black"
-              aria-label="Next image"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            
-            {/* Dots indicator */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-              {displayImages.map((_, index) => (
-                <button
-                  key={`dot-${index}`}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </>
+      </section>
     );
   }
   
   // Original masonry layout for desktop
   return (
-    <>
-      <SectionTitle 
-        title={title}
-        textColor="text-black"
-        backgroundColor={bgColor}
-      />
-      <div className={`container mx-auto px-4 pb-4 ${bgColor}`}>
-        <div className={`grid ${column2.length > 0 ? 'grid-cols-2' : 'grid-cols-1'} gap-4`}>
-          {/* Column 1 */}
-          <div className="grid gap-4">
-            {column1.map((image, index) => (
-              <div
-                key={`image-col1-${index}`}
-                className="h-[65vh] overflow-hidden rounded-lg"
-              >
-                <Image
-                  className="w-full h-full rounded-lg"
-                  src={image.src}
-                  alt={image.alt}
-                  width={500}
-                  height={400}
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            ))}
-          </div>
-          
-          {/* Column 2 (if exists) */}
-          {column2.length > 0 && (
+    <section className={`pb-16 ${bgColor}`}>
+      <div className="container mx-auto px-4">
+        <SectionTitle 
+          title={title}
+          textColor="text-black"
+          backgroundColor={bgColor}
+        />
+        <div className="pb-4">
+          <div className={`grid ${column2.length > 0 ? 'grid-cols-2' : 'grid-cols-1'} gap-4`}>
+            {/* Column 1 */}
             <div className="grid gap-4">
-              {column2.map((image, index) => (
+              {column1.map((image, index) => (
                 <div
-                  key={`image-col2-${index}`}
+                  key={`image-col1-${index}`}
                   className="h-[65vh] overflow-hidden rounded-lg"
                 >
                   <Image
@@ -207,9 +190,30 @@ export default function ResponsiveGallery({
                 </div>
               ))}
             </div>
-          )}
+            
+            {/* Column 2 (if exists) */}
+            {column2.length > 0 && (
+              <div className="grid gap-4">
+                {column2.map((image, index) => (
+                  <div
+                    key={`image-col2-${index}`}
+                    className="h-[65vh] overflow-hidden rounded-lg"
+                  >
+                    <Image
+                      className="w-full h-full rounded-lg"
+                      src={image.src}
+                      alt={image.alt}
+                      width={500}
+                      height={400}
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
