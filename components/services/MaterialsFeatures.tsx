@@ -60,7 +60,18 @@ export default function MaterialsFeatures(): React.ReactElement {
           <div 
             ref={scrollRef}
             className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 flex overflow-x-auto pb-4 gap-6 mt-10 snap-x snap-mandatory scrollbar-hide"
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch',
+            }}
           >
+            <style jsx>{`
+              div::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+
             {/* Feature cards - with flex-shrink-0 and min-width for mobile scrolling */}
             <div className="flex-shrink-0 min-w-[280px] w-[85%] md:w-full snap-start flex items-start gap-4 p-4 bg-gray-100 rounded-lg shadow-md">
               <div className="text-[#c9c5b1] text-2xl flex-shrink-0">

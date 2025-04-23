@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import SectionTitle from "../ui/SectionTitle";
 
@@ -14,25 +13,24 @@ interface FAQProps {
   title?: string;
 }
 
-export default function FAQ({ 
+export default function FAQ({
   faqData,
   title = "Frequently Asked Questions"
 }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-  
+  const [openIndex, setOpenIndex] = useState<number>(-1);
+
   const toggleAccordion = (index: number): void => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
-  
+
   return (
     <section className="pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
+        <SectionTitle
           title={title}
           textColor="text-black"
           backgroundColor="bg-white"
         />
-        
         <div className="accordion-group">
           {faqData.map((faq: FAQItem, index: number) => (
             <div

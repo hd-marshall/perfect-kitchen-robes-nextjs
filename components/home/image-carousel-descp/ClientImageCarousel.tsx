@@ -46,7 +46,7 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
   };
 
   return (
-    <section className="bg-neutral-300">
+    <section className="bg-zinc-200">
       {/* Mobile: Container for image and content stacked vertically */}
       <div className="md:hidden">
         <div className="relative w-full overflow-hidden rounded-md h-[55vh]">
@@ -92,7 +92,7 @@ export const ClientImageCarousel: React.FC<ClientImageCarouselProps> = ({ images
           </div>
         </div>
         {/* Mobile content below image - removed border */}
-        <div key={`mobile-content-${currentSlide}`} className="w-full bg-zinc-900 rounded-b-md p-4">
+        <div key={`mobile-content-${currentSlide}`} className="w-full bg-zinc-800 rounded-b-md p-4">
           <p className="text-white mb-4 text-base text-center">
             {activeImage.description}
           </p>

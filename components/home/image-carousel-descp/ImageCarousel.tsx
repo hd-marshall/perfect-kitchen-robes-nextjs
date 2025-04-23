@@ -18,11 +18,11 @@ interface ImageCarouselProps {
 // Server component that handles data fetching and initial render
 const ImageCarouselServer: React.FC<ImageCarouselProps> = ({ images }) => {
   return (
-    <div className="bg-neutral-300 w-full pb-12">
+    <div className="bg-zinc-200 w-full pb-12">
       <SectionTitle 
         title="Our Work" 
         textColor='text-black'
-        backgroundColor='bg-neutral-300'
+        backgroundColor='bg-zinc-200'
       />
       
       {/* Pass the images to the client component */}

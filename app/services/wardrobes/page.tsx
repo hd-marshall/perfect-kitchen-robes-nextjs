@@ -31,7 +31,7 @@ export default function WardrobeServicesPage() {
       <div className='pt-8 bg-zinc-800'>
         <SectionTitle 
           title="Find Your Perfect Wardrobe Style"
-          subtitle="Every Melbourne home and personal style is unique, which is why we specialise in crafting wardrobes that truly fit your space and needs. <br/><br/> Whether you're dreaming of a spacious walk-in wardrobe, need a seamlessly integrated built-in wardrobe for a bedroom, or want a clever reach-in robe for a smaller room, our team has the expertise to design and install it perfectly. We excel at finding smart solutions for tricky spaces, like angled ceilings or awkward corners, ensuring every centimetre works for you."
+          subtitle="Every Melbourne home and personal style is unique, which is why we specialise in crafting wardrobes that truly fit your space and needs. <br/><br/> Whether you're dreaming of a spacious walk-in wardrobe, need a seamlessly integrated built-in wardrobe for a bedroom, or want a clever reach-in robe for a smaller room, our team has the expertise to design and install it perfectly. <br/> <br/> We excel at finding smart solutions for tricky spaces, like angled ceilings or awkward corners, ensuring every centimetre works for you."
           textColor='text-white'
           backgroundColor='bg-zinc-800'
         />
