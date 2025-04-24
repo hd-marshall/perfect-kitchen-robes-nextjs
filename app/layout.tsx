@@ -98,7 +98,7 @@ export default function RootLayout({
                 'postalCode': '3061',
                 'addressCountry': 'AU'
               },
-              'telephone': '0433537057',
+              'telephone': '0393577204',
               'url': 'https://www.perfectkitchenrobes.com/',
               'image': [
                 'https://www.perfectkitchenrobes.com/favicon-32x32.png',
