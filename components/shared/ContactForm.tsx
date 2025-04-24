@@ -267,8 +267,8 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div className="flex flex-col ml-2">
                   <h2 className="text-2xl font-semibold">Contact Us</h2>
-                  <a href="tel:0433537057" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
-                    Phone: 0433 537 057
+                  <a href="tel:0393577204" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
+                    Phone: 03 9357-7204
                   </a>
                   <a href="mailto:info@perfectkitchenrobes.com" className="text-gray-400 hover:text-[#c9c5b1] transition-colors duration-300">
                     Email: info@perfectkitchenrobes.com
