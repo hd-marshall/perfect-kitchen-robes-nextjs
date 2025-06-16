@@ -180,6 +180,21 @@ export interface Testimonial {
 
 export const testimonialsData: Testimonial[] = [
   {
+    title: "Optimised Every Corner",
+    content: "The team at Perfect Kitchen & Robes did an amazing job at my custom walk in robe. They optimised every corner giving me maximum storage space! They gave me great ideas from colours, hanging spaces and even my own jewellery draw. Couldn’t be more happy with how everything turned out!!",
+    author: "Christine Grima"
+  },
+  {
+    title: "Excellent Communication",
+    content: "Tim & his team were able to transform our walk in robe and create an incredible space full of extra storage. Excellent communication skills & very professional. I highly recommend Perfect Kitchen & Robes for all your wardrobe needs.",
+    author: "Nicole Cook"
+  },
+  {
+    title: "Amazing Throughout the Whole Process",
+    content: "The team at Perfect Kitchen and Robes were amazing throughout the whole process of our custom wardrobe. From the design to the installation, I could not recommend their work more highly! They brought our vision to life and can not fault their craftsmanship or their customer service.",
+    author: "Stephanie Pobjie"
+  },
+  {
     title: "Very Professional",
     content: "I had Matt and Tim redo my walk in wardrobe, very professional and quality of it is great! recommend 100%",
     author: "Liam Bailey"

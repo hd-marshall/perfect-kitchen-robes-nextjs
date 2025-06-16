@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import HalfHorizontalHero from '@/components/heroes/HalfHorizontalHero';
 import SectionTitle from '@/components/ui/SectionTitle';
-// import ServiceFeatures from '@/components/services/ServicesFeatures';
 import OurApproach from '@/components/services/OurApproach';
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
@@ -10,6 +9,7 @@ import ContactForm from '@/components/shared/ContactForm';
 import FAQ from '@/components/shared/FAQ'
 
 import { wardrobeGalleryImages, brandsUsedImages } from '@/data/services-images';
+import { wardrobeServiceFeatures } from '@/data/materials-features'
 import { wardrobeFAQs } from '@/data/faq-data';
 
 export const metadata: Metadata = {
@@ -39,9 +39,12 @@ export default function WardrobeServicesPage() {
 
       <OurApproach />
 
-      <MasonryGallery title='Our Wardrobe Collection' images={wardrobeGalleryImages} />
+      <MasonryGallery 
+        title='Our Wardrobe Collection' 
+        images={wardrobeGalleryImages} 
+      />
       
-      <MaterialsFeatures />
+      <MaterialsFeatures {...wardrobeServiceFeatures} />
       
       <MovingSlideShow images={brandsUsedImages} />
       
