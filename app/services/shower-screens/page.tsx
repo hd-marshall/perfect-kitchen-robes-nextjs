@@ -31,7 +31,7 @@ export default function ShowerScreenServicesPage() {
       <div className='pt-8 bg-zinc-800'>
         <SectionTitle 
           title="Quality Hardware and Finishes"
-          subtitle="The details matter. We complement our quality glass panels with durable hardware and fittings designed for wet areas. <br /> <br /> Choose from hinges, handles, and framing (where applicable) in a variety of finishes to perfectly match your bathroom's tapware and accessories – popular choices include polished chrome, sophisticated matte black, elegant brushed nickel, and warm brushed gold. <br /> <br /> Our components are selected for smooth operation and longevity."
+          subtitle="The details matter. We complement our quality glass panels with durable hardware and fittings designed for wet areas. <br /> <br /> Choose from hinges, handles, and framing (where applicable) in a variety of finishes to perfectly match your bathroom's tapware and accessories. <br /> <br /> Popular choices include polished chrome, sophisticated matte black, elegant brushed nickel, and warm brushed gold. Our components are selected for smooth operation and longevity."
           textColor='text-white'
           backgroundColor='bg-zinc-800'
         />
@@ -45,7 +45,7 @@ export default function ShowerScreenServicesPage() {
       <div className='pt-8 bg-[#F5F5F5]'>
         <SectionTitle 
           title="Why Expert Installation is Crucial"
-          subtitle="Achieving a truly watertight seal and ensuring the longevity and safety of your shower screen hinges on professional installation. Our experienced Melbourne-based team takes precise measurements before ordering your custom-sized screen. <br /> <br /> This ensures a perfect fit, especially critical for frameless and semi-frameless designs. We use quality sealants and expert techniques during installation to prevent leaks, ensure smooth door operation (if applicable), and guarantee your screen is securely fitted according to Australian standards."
+          subtitle="Achieving a truly watertight seal and ensuring the longevity and safety of your shower screen hinges on professional installation. <br /> <br /> Our experienced Melbourne-based team takes precise measurements before ordering your custom-sized screen. This ensures a perfect fit, especially critical for frameless and semi-frameless designs. <br /> <br /> We use quality sealants and expert techniques during installation to prevent leaks, ensure smooth door operation (if applicable), and guarantee your screen is securely fitted according to Australian standards."
           textColor='text-black'
           backgroundColor='bg-[#F5F5F5]'
         />
