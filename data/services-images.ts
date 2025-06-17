@@ -34,10 +34,10 @@ export const laundryGalleryImages = [
 export const showerScreenGalleryImages = [
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-1.webp", alt: "Frameless glass shower screen" },
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-2.webp", alt: "Semi-frameless shower enclosure" },
-  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-3.webp", alt: "Corner shower screen installation" },
+  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-3.jpg", alt: "Corner shower screen installation" },
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-4.webp", alt: "Custom shower screen for unique space" },
   { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-5.jpg", alt: "Minimalist shower screen design" },
-  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-6.jpg", alt: "Shower screen with black hardware" },
+  { src: "/assets/images/shower-screens/gallery/shower-screen-gallery-6.webp", alt: "Shower screen with black hardware" },
 ];
   
 // Sliding Door Gallery Images
