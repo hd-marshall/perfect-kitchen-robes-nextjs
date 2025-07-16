@@ -64,7 +64,7 @@ export default function AboutPage() {
       </div>
       
       {/* Team Section */}
-      <div className="py-16 px-4 bg-gray-50">
+      {/* <div className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-zinc-800">
@@ -76,7 +76,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center">
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center">
-                {/* Square image with border radius */}
                 <div className="w-64 h-64 rounded-2xl overflow-hidden mb-6 bg-gray-200 border border-gray-300 shadow-md">
                   {/* When you have actual images, uncomment this and remove the placeholder div below */}
                   {/* 
@@ -90,8 +89,7 @@ export default function AboutPage() {
                   />
                   */}
                   
-                  {/* Placeholder for now */}
-                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                  {/* <div className="w-full h-full flex items-center justify-center bg-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-16 h-16 text-gray-400">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
@@ -104,7 +102,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       <ContactForm/>
     </section>
   );
