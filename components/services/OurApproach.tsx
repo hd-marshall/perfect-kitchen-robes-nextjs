@@ -99,27 +99,27 @@ export default function ProcessSteps({
     if (totalSteps <= 3) {
       return {
         rows: [totalSteps],
-        gridCols: totalSteps === 1 ? 'grid-cols-1' : totalSteps === 2 ? 'grid-cols-2' : 'grid-cols-3'
+        gridCols: totalSteps === 1 ? 'lg:grid-cols-1' : totalSteps === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'
       };
     } else if (totalSteps === 4) {
       return {
-        rows: [4], // Always single row for 4 steps
-        gridCols: 'grid-cols-1 sm:grid-cols-4' // Responsive classes only for 4 steps
+        rows: [4],
+        gridCols: 'lg:grid-cols-4'
       };
     } else if (totalSteps === 5) {
       return {
         rows: [3, 2],
-        gridCols: 'grid-cols-3' // Back to original fixed grid for 5 steps
+        gridCols: 'lg:grid-cols-3'
       };
     } else if (totalSteps === 6) {
       return {
         rows: [3, 3],
-        gridCols: 'grid-cols-3'
+        gridCols: 'lg:grid-cols-3'
       };
     } else if (totalSteps <= 8) {
       return {
         rows: [4, totalSteps - 4],
-        gridCols: 'grid-cols-4'
+        gridCols: 'lg:grid-cols-4'
       };
     } else {
       // For more than 8 steps, use a consistent 4-column layout
@@ -136,7 +136,7 @@ export default function ProcessSteps({
       }
       return {
         rows: rows,
-        gridCols: 'grid-cols-4'
+        gridCols: 'lg:grid-cols-4'
       };
     }
   };
@@ -249,41 +249,31 @@ export default function ProcessSteps({
         />
         
         {/* Desktop layout - dynamic grid based on number of steps */}
-        <div className="space-y-12">
+        <div>
           {gridLayout.rows.map((stepsInRow, rowIndex) => {
             const startIndex = gridLayout.rows.slice(0, rowIndex).reduce((sum, count) => sum + count, 0);
             const rowSteps = processStepData.slice(startIndex, startIndex + stepsInRow);
             
-            // Determine grid classes and centering based on row configuration
-            let gridClasses = '';
-            let containerClasses = '';
-            let gapClasses = 'gap-6'; // default gap
+            // Determine grid template columns based on the maximum columns in the layout
+            const maxCols = gridLayout.gridCols.includes('4') ? 4 : gridLayout.gridCols.includes('3') ? 3 : 2;
             
-            // Special handling for 4-step single row (responsive)
-            if (totalItems === 4 && stepsInRow === 4) {
-              gridClasses = gridLayout.gridCols; // Use responsive classes from layout
-              containerClasses = '';
-              gapClasses = 'gap-4 sm:gap-6';
-            }
-            // Standard handling for all other configurations
-            else if (stepsInRow === 1) {
-              gridClasses = 'grid-cols-1';
-              containerClasses = 'max-w-md mx-auto';
-            } else if (stepsInRow === 2) {
-              gridClasses = 'grid-cols-2';
-              containerClasses = 'max-w-2xl mx-auto';
-              gapClasses = 'gap-8 md:gap-12';
-            } else if (stepsInRow === 3) {
-              gridClasses = 'grid-cols-3';
-              containerClasses = '';
-            } else {
-              gridClasses = 'grid-cols-4';
-              containerClasses = '';
-            }
+            // Use CSS Grid with explicit column fractions for equal widths
+            const gridStyle = {
+              display: 'grid',
+              gridTemplateColumns: `repeat(${stepsInRow}, 1fr)`,
+              gap: '1.5rem', // Consistent gap for all layouts
+              marginBottom: rowIndex < gridLayout.rows.length - 1 ? '3rem' : '0' // Add bottom margin except for last row
+            };
+            
+            // For rows with fewer items than max columns, center the grid
+            const containerStyle = stepsInRow < maxCols ? {
+              maxWidth: `${(stepsInRow / maxCols) * 100}%`,
+              margin: '0 auto'
+            } : {};
 
             return (
-              <div key={rowIndex} className={containerClasses}>
-                <div className={`grid ${gridClasses} ${gapClasses} items-stretch`}>
+              <div key={rowIndex} style={containerStyle} className={rowIndex > 0 ? 'mt-12' : ''}>
+                <div style={gridStyle}>
                   {rowSteps.map((step, stepIndex) => (
                     <div key={startIndex + stepIndex} className="bg-white rounded-lg shadow-xl p-8 relative h-full flex flex-col">
                       {/* Image */}
