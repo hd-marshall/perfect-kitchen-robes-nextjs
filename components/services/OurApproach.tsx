@@ -4,14 +4,22 @@ import Image from 'next/image';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 // Define interfaces for TypeScript
-interface ProcessStep {
+export interface ProcessStep {
   title: string;
   description: string;
   imageSrc: string;
 }
 
-// Define the process steps data
-const processStepsData: ProcessStep[] = [
+interface ProcessStepsProps {
+  processStepData?: ProcessStep[];
+  title?: string;
+  subtitle?: string;
+  textColor?: string;
+  backgroundColor?: string;
+}
+
+// Define the default process steps data
+const defaultProcessStepsData: ProcessStep[] = [
   {
     title: "Consultation",
     description: "We chat with you (often on-site in your Melbourne home) to discuss your vision, storage requirements, and style preferences.",
@@ -39,16 +47,22 @@ const processStepsData: ProcessStep[] = [
   }
 ];
 
-export default function OurProcess(): React.ReactElement {
+export default function ProcessSteps({
+  processStepData = defaultProcessStepsData,
+  title = "Our Custom Design Journey – Tailored for You",
+  subtitle = "Getting the perfect custom wardrobe sorted is easier than you think. Our process starts with understanding exactly what you need – from the amount of hanging space versus shelving, to special spots for shoes, ties, or jewellery.",
+  textColor = "text-black",
+  backgroundColor = "bg-white"
+}: ProcessStepsProps): React.ReactElement {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const totalItems: number = processStepsData.length;
+  const totalItems: number = processStepData.length;
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
-  // Check if we're on mobile
+  // Check if we're on mobile/tablet (portrait iPad and smaller)
   useEffect(() => {
     const checkIfMobile = (): void => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024); // Changed from 768 to 1024 to include iPad portrait
     };
     
     checkIfMobile();
@@ -80,6 +94,60 @@ export default function OurProcess(): React.ReactElement {
     };
   }, [totalItems, isMobile]);
 
+  // Function to determine grid layout based on number of steps
+  const getGridLayout = (totalSteps: number) => {
+    if (totalSteps <= 3) {
+      return {
+        rows: [totalSteps],
+        gridCols: totalSteps === 1 ? 'grid-cols-1' : totalSteps === 2 ? 'grid-cols-2' : 'grid-cols-3'
+      };
+    } else if (totalSteps === 4) {
+      return {
+        rows: [4], // Always single row for 4 steps
+        gridCols: 'grid-cols-1 sm:grid-cols-4' // Responsive classes only for 4 steps
+      };
+    } else if (totalSteps === 5) {
+      return {
+        rows: [3, 2],
+        gridCols: 'grid-cols-3' // Back to original fixed grid for 5 steps
+      };
+    } else if (totalSteps === 6) {
+      return {
+        rows: [3, 3],
+        gridCols: 'grid-cols-3'
+      };
+    } else if (totalSteps <= 8) {
+      return {
+        rows: [4, totalSteps - 4],
+        gridCols: 'grid-cols-4'
+      };
+    } else {
+      // For more than 8 steps, use a consistent 4-column layout
+      const rows = [];
+      let remaining = totalSteps;
+      while (remaining > 0) {
+        if (remaining >= 4) {
+          rows.push(4);
+          remaining -= 4;
+        } else {
+          rows.push(remaining);
+          remaining = 0;
+        }
+      }
+      return {
+        rows: rows,
+        gridCols: 'grid-cols-4'
+      };
+    }
+  };
+
+  const gridLayout = getGridLayout(totalItems);
+
+  // Function to render arrows between steps
+  const shouldShowArrow = (rowIndex: number, stepIndex: number, stepsInRow: number) => {
+    // Don't show arrow after the last step in a row
+    return stepIndex < stepsInRow - 1;
+  };
   // Function to scroll to a specific item when indicator is clicked
   const scrollToItem = (index: number): void => {
     if (scrollRef.current) {
@@ -98,10 +166,10 @@ export default function OurProcess(): React.ReactElement {
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Title */}
           <SectionTitle
-            title="Our Custom Design Journey – Tailored for You"
-            subtitle='Getting the perfect custom wardrobe sorted is easier than you think. Our process starts with understanding exactly what you need – from the amount of hanging space versus shelving, to special spots for shoes, ties, or jewellery.'
-            textColor='text-black'
-            backgroundColor='bg-white'
+            title={title}
+            subtitle={subtitle}
+            textColor={textColor}
+            backgroundColor={backgroundColor}
           />
           
           {/* Mobile Process Steps - Horizontal scroll */}
@@ -117,7 +185,7 @@ export default function OurProcess(): React.ReactElement {
               }
             `}</style>
             
-            {processStepsData.map((step, index) => (
+            {processStepData.map((step, index) => (
               <div 
                 key={index} 
                 className="flex-shrink-0 min-w-[280px] w-[85%] snap-start bg-white rounded-lg shadow-xl p-8 relative"
@@ -174,91 +242,91 @@ export default function OurProcess(): React.ReactElement {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <SectionTitle
-            title="Our Custom Design Journey – Tailored for You"
-            subtitle='Getting the perfect custom wardrobe sorted is easier than you think. Our process starts with understanding exactly what you need – from the amount of hanging space versus shelving, to special spots for shoes, ties, or jewellery.'
-            textColor='text-black'
-            backgroundColor='bg-white'
+            title={title}
+            subtitle={subtitle}
+            textColor={textColor}
+            backgroundColor={backgroundColor}
         />
         
-        {/* Desktop layout - matching the image */}
+        {/* Desktop layout - dynamic grid based on number of steps */}
         <div className="space-y-12">
-          {/* Top row: first 3 steps */}
-          <div className="grid grid-cols-3 gap-6">
-            {processStepsData.slice(0, 3).map((step, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-xl p-8 relative">
-                {/* Image */}
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <Image
-                    src={step.imageSrc}
-                    alt={step.title}
-                    width={80}
-                    height={80}
-                    className="object-contain"
-                  />
-                </div>
-                
-                {/* Step Title */}
-                <h3 className="text-xl font-medium text-[#464646] mb-4 text-center">
-                  {step.title}
-                </h3>
-                
-                {/* Step Description */}
-                <p className="text-[#464646] text-center leading-relaxed">
-                  {step.description}
-                </p>
-                
-                {/* Right arrow for first 2 steps only */}
-                {index < 2 && (
-                  <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 z-10">
-                    <div className="w-0 h-0
-                     border-t-[15px] border-t-transparent
-                     border-l-[20px] border-l-zinc-400
-                     border-b-[15px] border-b-transparent">
+          {gridLayout.rows.map((stepsInRow, rowIndex) => {
+            const startIndex = gridLayout.rows.slice(0, rowIndex).reduce((sum, count) => sum + count, 0);
+            const rowSteps = processStepData.slice(startIndex, startIndex + stepsInRow);
+            
+            // Determine grid classes and centering based on row configuration
+            let gridClasses = '';
+            let containerClasses = '';
+            let gapClasses = 'gap-6'; // default gap
+            
+            // Special handling for 4-step single row (responsive)
+            if (totalItems === 4 && stepsInRow === 4) {
+              gridClasses = gridLayout.gridCols; // Use responsive classes from layout
+              containerClasses = '';
+              gapClasses = 'gap-4 sm:gap-6';
+            }
+            // Standard handling for all other configurations
+            else if (stepsInRow === 1) {
+              gridClasses = 'grid-cols-1';
+              containerClasses = 'max-w-md mx-auto';
+            } else if (stepsInRow === 2) {
+              gridClasses = 'grid-cols-2';
+              containerClasses = 'max-w-2xl mx-auto';
+              gapClasses = 'gap-8 md:gap-12';
+            } else if (stepsInRow === 3) {
+              gridClasses = 'grid-cols-3';
+              containerClasses = '';
+            } else {
+              gridClasses = 'grid-cols-4';
+              containerClasses = '';
+            }
+
+            return (
+              <div key={rowIndex} className={containerClasses}>
+                <div className={`grid ${gridClasses} ${gapClasses} items-stretch`}>
+                  {rowSteps.map((step, stepIndex) => (
+                    <div key={startIndex + stepIndex} className="bg-white rounded-lg shadow-xl p-8 relative h-full flex flex-col">
+                      {/* Image */}
+                      <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center flex-shrink-0">
+                        <Image
+                          src={step.imageSrc}
+                          alt={step.title}
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                      </div>
+                      
+                      {/* Step Title - Fixed height area */}
+                      <div className="h-16 flex items-center justify-center mb-4 flex-shrink-0">
+                        <h3 className="text-xl font-medium text-[#464646] text-center leading-tight">
+                          {step.title}
+                        </h3>
+                      </div>
+                      
+                      {/* Step Description - Flexible area */}
+                      <div className="flex-grow flex items-start">
+                        <p className="text-[#464646] text-center leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                      
+                      {/* Right arrow - show for all but last step in row */}
+                      {shouldShowArrow(rowIndex, stepIndex, stepsInRow) && (
+                        <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 z-10">
+                          <div className="w-0 h-0
+                           border-t-[15px] border-t-transparent
+                           border-l-[20px] border-l-zinc-400
+                           border-b-[15px] border-b-transparent">
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          
-          {/* Bottom row: last 2 steps centered */}
-          <div className="grid grid-cols-2 gap-6 mx-auto" style={{ width: '66%' }}>
-            {processStepsData.slice(3, 5).map((step, index) => (
-              <div key={index + 3} className="bg-white rounded-lg shadow-xl p-8 relative">
-                {/* Image */}
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <Image
-                    src={step.imageSrc}
-                    alt={step.title}
-                    width={80}
-                    height={80}
-                    className="object-contain"
-                  />
+                  ))}
                 </div>
-                
-                {/* Step Title */}
-                <h3 className="text-xl font-medium text-[#464646] mb-4 text-center">
-                  {step.title}
-                </h3>
-                
-                {/* Step Description */}
-                <p className="text-[#464646] text-center leading-relaxed">
-                  {step.description}
-                </p>
-                
-                {/* Right arrow for step 4 only */}
-                {index === 0 && (
-                  <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 z-10">
-                    <div className="w-0 h-0
-                     border-t-[15px] border-t-transparent
-                     border-l-[20px] border-l-zinc-400
-                     border-b-[15px] border-b-transparent">
-                    </div>
-                  </div>
-                )}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
