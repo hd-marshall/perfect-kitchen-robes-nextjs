@@ -273,6 +273,90 @@ export const slidingDoorsFeatures: FeatureItem[] = [
   }
 ];
 
+// Laundry Features
+export const laundryFeatures: FeatureItem[] = [
+  {
+    title: "Overhead Cupboards",
+    description: "Perfect for storing detergents, cleaning supplies, and less-used items safely out of the way.",
+    icon: React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      className: "h-8 w-8",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+    }))
+  },
+  {
+    title: "Tall Cabinets",
+    description: "Ideal for brooms, mops, vacuum cleaners, and ironing boards.",
+    icon: React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      className: "h-8 w-8",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+    }))
+  },
+  {
+    title: "Built-in Hampers",
+    description: "Concealed pull-out or tilt-out hampers for sorting whites, colours, and delicates.",
+    icon: React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      className: "h-8 w-8",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+    }))
+  },
+  {
+    title: "Durable Benchtops",
+    description: "Ample counter space above your washer and dryer for sorting, folding, or treating stains.",
+    icon: React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      className: "h-8 w-8",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+    }))
+  },
+  {
+    title: "Open Shelving",
+    description: "Stylish options for frequently used items or decorative baskets.",
+    icon: React.createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      className: "h-8 w-8",
+      fill: "none",
+      viewBox: "0 0 24 24",
+      stroke: "currentColor"
+    }, React.createElement("path", {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: 2,
+      d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+    }))
+  }
+];
+
 // Service configurations
 export const wardrobeServiceFeatures: ServiceFeatures = {
   sectionId: "wardrobe-materials-features",
@@ -294,9 +378,18 @@ export const showerScreenServiceFeatures: ServiceFeatures = {
 
 export const slidingDoorsServiceFeatures: ServiceFeatures = {
   sectionId: "sliding-doors-features",
-  title: "Systems and Styles for <br/> Every Space",
-  description: "We offer various track systems and configurations to suit different applications and structural requirements. From smooth top-hung systems for an unobstructed floor to robust bottom-rolling systems, we have the perfect solution. Beyond the mechanism, the style is all yours:",
+  title: "Choosing Your System and Style",
+  description: "We offer various track systems and configurations to suit different applications and structural requirements, including smooth <strong>top-hung systems</strong> for an unobstructed floor or robust <strong>bottom-rolling systems</strong>. Select from single, double, or even triple track configurations to control how your space opens up. Beyond the mechanism, the style is all yours. Choose from:",
   features: slidingDoorsFeatures,
+  backgroundColor: "bg-zinc-800",
+  textColor: "text-white"
+};
+
+export const laundryServiceFeatures: ServiceFeatures = {
+  sectionId: "laundry-storage-features",
+  title: "Custom Storage for Every <br/> Laundry Need",
+  description: "Beyond just integrating appliances, our smart designs focus on tailored storage solutions to keep everything organised and within easy reach. <br/><br/> We work with you to design a layout that optimises your workflow, considering everything from appliance placement (stacked or side-by-side) to sink usability and ventilation.",
+  features: laundryFeatures,
   backgroundColor: "bg-zinc-800",
   textColor: "text-white"
 };
