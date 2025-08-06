@@ -25,17 +25,17 @@ const kitchenProcessSteps = [
   {
     title: "Concept & Visualisation",
     description: "We develop detailed designs, potentially including 3D views, so you can clearly visualise your new kitchen before committing.",
-    imageSrc: "/assets/images/our-process/wood.png"
+    imageSrc: "/assets/images/our-process/perception.png"
   },
   {
     title: "Material Guidance",
     description: "We guide you through selecting the best benchtops, cabinetry finishes, splashbacks, and hardware from our range of high-quality, durable options, many sourced from top Australian suppliers.",
-    imageSrc: "/assets/images/our-process/contract.png"
+    imageSrc: "/assets/images/our-process/wood.png"
   },
   {
     title: "Clear Quote & Timeline",
     description: "You receive a transparent quote and a realistic project timeline.",
-    imageSrc: "/assets/images/our-process/hammer.png"
+    imageSrc: "/assets/images/our-process/contract.png"
   }
 ];
 
