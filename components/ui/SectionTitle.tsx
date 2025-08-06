@@ -22,7 +22,7 @@ export default function SectionTitle({
       <div className="max-w-screen-xl mx-auto px-4 py-8">
         <div className="text-center">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${textColor}`}
+            className={`text-4xl md:text-5xl font-bold mb-8 ${textColor}`}
             dangerouslySetInnerHTML={{ __html: title }}
           />
           {subtitle && (
