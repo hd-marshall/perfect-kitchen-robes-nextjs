@@ -5,6 +5,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import OurApproach from '@/components/services/OurApproach'
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
+import ElfsightGoogleReviews from '@/components/shared/ElfShiftReviews';
 import ContactForm from '@/components/shared/ContactForm';
 import FAQ from '@/components/shared/FAQ';
 
@@ -84,6 +85,8 @@ export default function KitchenServicesPage() {
       </div>
 
       <MovingSlideShow images={brandsUsedImages} />
+
+      <ElfsightGoogleReviews />
       
       <ContactForm />
 

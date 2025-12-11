@@ -5,6 +5,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MaterialsFeatures from '@/components/services/MaterialsFeatures'
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
+import ElfsightGoogleReviews from '@/components/shared/ElfShiftReviews';
 import ContactForm from '@/components/shared/ContactForm';
 import FAQ from '@/components/shared/FAQ';
 
@@ -51,6 +52,8 @@ export default function SlidingDoorServicesPage() {
       <MaterialsFeatures {...slidingDoorsServiceFeatures} />
 
       <MovingSlideShow images={brandsUsedImages} />
+
+      <ElfsightGoogleReviews />
 
       <ContactForm />
 

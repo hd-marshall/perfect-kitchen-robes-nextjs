@@ -5,6 +5,7 @@ import OurApproach from '@/components/services/OurApproach';
 import MasonryGallery from '@/components/services/MasonryGallery';
 import MovingSlideShow from '@/components/shared/MovingSlideShow';
 import MaterialsFeatures from '@/components/services/MaterialsFeatures';
+import ElfsightGoogleReviews from '@/components/shared/ElfShiftReviews';
 import ContactForm from '@/components/shared/ContactForm';
 import FAQ from '@/components/shared/FAQ'
 
@@ -47,6 +48,8 @@ export default function WardrobeServicesPage() {
       <MaterialsFeatures {...wardrobeServiceFeatures} />
       
       <MovingSlideShow images={brandsUsedImages} />
+
+      <ElfsightGoogleReviews />
       
       <ContactForm />
 

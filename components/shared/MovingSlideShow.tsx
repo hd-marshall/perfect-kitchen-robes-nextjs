@@ -73,7 +73,7 @@ export default function MovingSlideShow({ images = [] }: MovingSlideShowProps) {
   }, [images]);
 
   return (
-    <section className='bg-white'>
+    <section className='bg-white mb-16'>
       <h2 
         className="text-black md:text-5xl text-4xl text-center mt-8 font-bold mb-8"
         style={{
