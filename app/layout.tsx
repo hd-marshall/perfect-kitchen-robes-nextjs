@@ -107,6 +107,11 @@ export default function RootLayout({
               ],
               'logo': 'https://www.perfectkitchenrobes.com/favicon-32x32.png',
               'priceRange': '$$',
+              'aggregateRating': {
+                '@type': 'AggregateRating',
+                'ratingValue': '5.0',
+                'reviewCount': '22'
+              },
               'openingHoursSpecification': [
                 {
                   '@type': 'OpeningHoursSpecification',
