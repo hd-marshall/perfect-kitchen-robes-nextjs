@@ -6,7 +6,7 @@ export default function ElfsightGoogleReviews() {
   // Define the schema data statically based on your expected ratings
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness", // Change this type if you are reviewing a product
+    "@type": "HomeAndConstructionBusiness", // Change this type if you are reviewing a product
     "name": "Perfect Kitchen & Robes",
     "url": `https://perfectkitchenrobes.com${usePathname()}`, // Ensures the URL is correct for the current page
     "aggregateRating": {
