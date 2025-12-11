@@ -3,7 +3,11 @@ import Script from 'next/script';
 
 export default function ElfsightGoogleReviews() {
   return (
-    <div className="bg-zinc-800 py-8">
+    <div className="bg-zinc-800 pt-12">
+      <h2 className="font-bold text-4xl md:text-5xl text-white text-center mb-6 px-4">
+        What Our Customers Have To Say
+      </h2>
+      
       <Script 
         src="https://elfsightcdn.com/platform.js" 
         strategy="lazyOnload"

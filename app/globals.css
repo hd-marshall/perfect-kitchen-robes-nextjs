@@ -23,7 +23,39 @@
   }
 }
 
+* {
+  font-weight: 400 !important;
+}
+
+b, strong {
+  font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  font-weight: 200;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 200 !important;
+}
+
+/* Or target everything except Elfsight */
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h1,
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h2,
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h3,
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h4,
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h5,
+:not(.elfsight-app-3a1961c4-4e0f-411e-a60d-9ffdbe7e3dc6) h6 {
+  font-weight: 200 !important;
 }
