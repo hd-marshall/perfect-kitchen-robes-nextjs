@@ -19,8 +19,7 @@ export default function ResponsiveGallery({
   bgColor = "bg-white",
   title = "Our Recent Projects"
 }: ResponsiveGalleryProps) {
-  // Ensure we have at most 6 images
-  const displayImages = images.slice(0, Math.min(images.length, 6));
+  const displayImages = images;
   
   // State for carousel
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,32 +58,23 @@ export default function ResponsiveGallery({
   // Distribute images for masonry layout
   const distributeImages = () => {
     const totalImages = displayImages.length;
-    
-    // If 1-2 images, put in first column
-    if (totalImages <= 2) {
-      return {
-        column1: displayImages,
-        column2: []
-      };
+    const isOdd = totalImages % 2 !== 0;
+    const mainImages = isOdd ? displayImages.slice(0, totalImages - 1) : displayImages;
+    const lastImage = isOdd ? displayImages[totalImages - 1] : null;
+
+    if (mainImages.length <= 2) {
+      return { column1: mainImages, column2: [], lastImage };
     }
-    
-    // If 3-4 images, distribute more evenly
-    if (totalImages <= 4) {
-      const midPoint = Math.ceil(totalImages / 2);
-      return {
-        column1: displayImages.slice(0, midPoint),
-        column2: displayImages.slice(midPoint)
-      };
-    }
-    
-    // For 5-6 images, use original distribution
+
+    const midPoint = Math.ceil(mainImages.length / 2);
     return {
-      column1: [displayImages[0], displayImages[1], displayImages[2]],
-      column2: [displayImages[3], displayImages[4], displayImages[5]]
+      column1: mainImages.slice(0, midPoint),
+      column2: mainImages.slice(midPoint),
+      lastImage
     };
   };
-  
-  const { column1, column2 } = distributeImages();
+
+  const { column1, column2, lastImage } = distributeImages();
   
   // Carousel layout for mobile/tablet
   if (isMobileOrTablet) {
@@ -196,7 +186,7 @@ export default function ResponsiveGallery({
                 </div>
               ))}
             </div>
-            
+
             {/* Column 2 (if exists) */}
             {column2.length > 0 && (
               <div className="grid gap-4">
@@ -220,6 +210,23 @@ export default function ResponsiveGallery({
               </div>
             )}
           </div>
+
+          {/* Centered last image for odd counts */}
+          {lastImage && (
+            <div className="flex justify-center mt-4">
+              <div className="w-1/2 h-[65vh] overflow-hidden rounded-lg relative">
+                <Image
+                  className="w-full h-full rounded-lg"
+                  src={lastImage.src}
+                  alt={lastImage.alt}
+                  width={500}
+                  height={400}
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
